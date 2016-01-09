@@ -1,0 +1,1573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威中文论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+
+<span style="margin-left:25px"></span>摘  要指纹作为用户身份的标识信息在许多身份认证领域一直扮演着十分重要的作用。
+<br><br>
+<span style="margin-left:25px"></span>指纹认证系统是一种重要的身份认证系统，在门禁、考勤等领域起着不可替代的重要作用。在移动互联网时代，随着电子商务和电子支付的流行，对用户身份认证的需求更加广泛，指纹认证系统的地位越来越重要。传统的接触式指纹认证系统经过多年的发展与应用已经相当成熟。
+<br><br>
+<span style="margin-left:25px"></span>但是，在移动互联网的背景下，传统指纹认证系统却暴漏出了一些问题。首先是成本问题，传统指纹认证系统采用指纹传感器作为输出终端，这是一种 C/ S架构模型，这意味着对于每一个系统而言，都必须先安装相应硬件和软件，这就造成了成本偏高的问题；其次是可用性问题，由于传统指纹认证系统依赖于特定的软硬件，而当特定的软硬件出现故障时，用户就无法使用该系统进行身份认证，也就无法完成整个业务流程，这就造成了系统可用性差的问题；其次是安全性问题，在传统指纹认证系统中，指纹传感器是一种接触式的输入终端，用户按压之后会留下痕迹，这有可能造成用户信息的非法窃取，这就造成了系统安全性低的问题。为了解决上述问题，我们提出了一种基于智能手机的新的指纹认证系统解决方案。
+<br><br>
+<span style="margin-left:25px"></span>采用智能手机作为输入终端，采用 REST风格的 Web服务提供跨平台的指纹认证服务，采用数字水印算法对指纹信息进行加密，这种解决方案既符合了移动互联网时代的技术架构，同时解决了传统指纹识别系统的成本、可用性和安全性问题。为了实现上述新解决方案，利用面向对象的需求分析与设计方法进行了系统需求建模、概要设计和详细设计、数据库设计，并结合 Nancy框架和可逆数字水印算法实现了一个基于智能手机的指纹认证系统原型。最后，为了验证指纹认证系统的有效性，我们采用 MATLAB程序对指纹认证系统进行了仿真分析，仿真结果表明，基于智能手机的指纹认证系统有效降低了系统成本、提升了系统有效性，对于会话劫持、重放攻击等 Web攻击行为具有较强的抵抗性。关键词：
+<br><br>
+<span style="margin-left:25px"></span>指纹认证；数字水印；加密；网络安全Abstract
+<br><br>
+<span style="margin-left:25px"></span>Fingerprint authentication system is an important identity authentication system， plays an irreplaceable role in access control， attendance and other fields.
+<br><br>
+<span style="margin-left:25px"></span> In the mobile Internet era， with the popularity of e- commerce and electronic payments， the demand for user authentication is more and more than before， fingerprint authentication system is more and more important.Traditional contact fingerprint authentication system after years of development and application is already quite mature.
+<br><br>
+<span style="margin-left:25px"></span> However， with the development of the mobile Internet， the traditional fingerprint authentication system has still leaked some problems. The first is the cost problems， the traditional fingerprint authentication system using fingerprint sensor as the output terminal， which is a C/ S architecture model， it means we must install the appropriate hardware and software for each system， and then the cost of system will be increased. The second is availability problems， since the conventional fingerprint authentication systems rely on specific hardware and software， and when the specific hardware and software fails， the user will not be able to use the system for authentication， it cannot complete the entire business process， this creates a problem of poor system availability; The last is safety problems， in the conventional fingerprint authentication system， fingerprint sensor is a contact input terminal， the traces will be left after the user presses， which may cause illegal user information stolen， which resulted in lower system security issues.To solve the problems， we proposed a new fingerprint authentication system based on smartphone solution.
+<br><br>
+<span style="margin-left:25px"></span> Using smartphone as an input terminal， using REST- style web service as cross- platform fingerprint authentication services， using digital watermark algorithm as fingerprint encrypted solution， this solution is suitable for mobile Internet， at the same time， the cost， usability and security of the traditional fingerprint identification system have been solved. In order to realize the new solution， we used the Object-Oriented system analysis and design method to give system requirements modeling， outline design， detailed design， and database design. Then we used Nancy Framework and reversible digital watermark algorithm to realize a fingerprint authentication system prototype based on smartphone. Finally， in order to verify the validity of the fingerprint authentication system， we use MATLAB program for fingerprint authentication system simulation analysis. The simulation results show that the fingerprint authentication system based on smartphone can effectively reduce the system cost and improve the effectiveness of the system， and the system has strong resistance to session hijacking and replay attack.Keywords:
+<br><br>
+<span style="margin-left:25px"></span> Fingerprint authentication; Watermark; Encryption; Web security目  录TOC \o ”1-2” \h \u
+<br><br>
+<span style="margin-left:25px"></span>摘  要I
+<br><br>
+<span style="margin-left:25px"></span>AbstractII
+<br><br>
+<span style="margin-left:25px"></span>1 绪论1
+<br><br>
+<span style="margin-left:25px"></span>1.1 课题研究背景1
+<br><br>
+<span style="margin-left:25px"></span>1.2 课题研究目的与意义2
+<br><br>
+<span style="margin-left:25px"></span>1.3 国内外研究概况2
+<br><br>
+<span style="margin-left:25px"></span>1.4 本文主要研究内容4
+<br><br>
+<span style="margin-left:25px"></span>2 相关技术分析6
+<br><br>
+<span style="margin-left:25px"></span>2.1 指纹识别技术6
+<br><br>
+<span style="margin-left:25px"></span>2.2 数字水印技术7
+<br><br>
+<span style="margin-left:25px"></span>2.3 ZXing开源框架7
+<br><br>
+<span style="margin-left:25px"></span>2.4 SOA与Web Service8
+<br><br>
+<span style="margin-left:25px"></span>2.5 Nancy Framework10
+<br><br>
+<span style="margin-left:25px"></span>2.6 本章小结13
+<br><br>
+<span style="margin-left:25px"></span>3 系统需求与建模分析14
+<br><br>
+<span style="margin-left:25px"></span>3.1 安全威胁及其防御14
+<br><br>
+<span style="margin-left:25px"></span>3.2 原有解决方案18
+<br><br>
+<span style="margin-left:25px"></span>3.3 基于数字水印解决方案20
+<br><br>
+<span style="margin-left:25px"></span>3.4 需求建模25
+<br><br>
+<span style="margin-left:25px"></span>3.5 本章小结26
+<br><br>
+<span style="margin-left:25px"></span>4 指纹认证系统设计27
+<br><br>
+<span style="margin-left:25px"></span>4.1 系统业务逻辑27
+<br><br>
+<span style="margin-left:25px"></span>4.2 基于REST的系统架构设计28
+<br><br>
+<span style="margin-left:25px"></span>4.3 数据库设计33
+<br><br>
+<span style="margin-left:25px"></span>4.4 本章小结35
+<br><br>
+<span style="margin-left:25px"></span>5 指纹认证系统实现36
+<br><br>
+<span style="margin-left:25px"></span>5.1 系统实现环境和思路36
+<br><br>
+<span style="margin-left:25px"></span>5.2 模型层实现37
+<br><br>
+<span style="margin-left:25px"></span>5.3 视图层实现40
+<br><br>
+<span style="margin-left:25px"></span>5.4 控制器层实现43
+<br><br>
+<span style="margin-left:25px"></span>5.5 本章小结49
+<br><br>
+<span style="margin-left:25px"></span>6 系统测试与仿真实验50
+<br><br>
+<span style="margin-left:25px"></span>6.1 加密过程50
+<br><br>
+<span style="margin-left:25px"></span>6.2 解密过程51
+<br><br>
+<span style="margin-left:25px"></span>6.3 实验结果52
+<br><br>
+<span style="margin-left:25px"></span>6.4 安全性分析53
+<br><br>
+<span style="margin-left:25px"></span>6.5 本章小结54
+<br><br>
+<span style="margin-left:25px"></span>7 总结与展望55
+<br><br>
+<span style="margin-left:25px"></span>7.1 总结55
+<br><br>
+<span style="margin-left:25px"></span>7.2 展望56
+<br><br>
+<span style="margin-left:25px"></span>致谢57
+<br><br>
+<span style="margin-left:25px"></span>参考文献58
+<br><br>
+<span style="margin-left:25px"></span>1 绪论
+<br><br>
+<span style="margin-left:25px"></span>2.1 课题研究背景
+<br><br>
+<span style="margin-left:25px"></span>指纹认证系统是一种重要的用户认证系统。
+<br><br>
+<span style="margin-left:25px"></span>在未来社会，它的作用会变的越来越重要。一些传统的应用领域如安全系统、门禁系统都需要使用指纹识别技术。随着移动互联网的快速发展，越来越多的新兴应用领域如电子商务、电子支付都可能需要使用指纹识别技术。然而传统的指纹认证系统却存在着一系列的问题，现详细分析如下。
+<br><br>
+<span style="margin-left:25px"></span>传统的指纹认证系统遵循的技术架构如图1.1所示。图1.1 传统指纹认证系统解决方案
+<br><br>
+<span style="margin-left:25px"></span>由上图可将传统指纹识别系统业务流程归结如下：
+<br><br>
+<span style="margin-left:25px"></span>（1）使用指纹读取器读取用户指纹信息；
+<br><br>
+<span style="margin-left:25px"></span>（2）指纹读取器连接计算机系统并将用户指纹信息发送给计算机；
+<br><br>
+<span style="margin-left:25px"></span>（3）指纹识别软件将用户的指纹信息与数据库中的用户指纹信息进行对比；
+<br><br>
+<span style="margin-left:25px"></span>（4）指纹识别系统计算指纹相似度，并判断用户是否认证成功，最终将指纹认证结果返回给用户。
+<br><br>
+<span style="margin-left:25px"></span>然而，随着移动互联网的快速发展，这种传统的指纹认证系统的弊端也逐渐显现出来。
+<br><br>
+<span style="margin-left:25px"></span>首先是成本问题，每一个需要使用指纹识别系统的应用场景，都需要购买并部署相应的系统软硬件，这导致了成本的上升。其次是易用性问题，传统的指纹识别系统需要特定的指纹传感器来采集用户的指纹信息，每一个系统部署都需要安装单独的硬件和软件。当系统硬件或软件发生故障时，用户就无法使用指纹系统进行身份认证，易用性较差。在这种背景下，我们认为结合现代移动互联网技术对指纹认证系统进行重新定义和研究很有必要。
+<br><br>
+<span style="margin-left:25px"></span>2.2 课题研究目的与意义
+<br><br>
+<span style="margin-left:25px"></span>2.3.1 研究目的
+<br><br>
+<span style="margin-left:25px"></span>论文旨在通过对传统指纹认证系统的问题进行分析研究，发现传统指纹认证系统的几个问题；
+<br><br>
+<span style="margin-left:25px"></span>并结合移动互联网背景下的最新技术如 SOA技术、 Web Service技术、智能终端技术对传统指纹认证系统进行改进，以期解决传统指纹认证系统在移动互联网环境下的成本、可用性、安全性问题，最终采用实现一个成本更低、可用性更好、安全性更高、更符合移动互联网要求的新型指纹认证系统。2.3.2 研究意义
+<br><br>
+<span style="margin-left:25px"></span>研究新型指纹认证系统的意义在于：
+<br><br>
+<span style="margin-left:25px"></span>（1）解决传统指纹认证系统中存在的成本、可用性和安全性问题。
+<br><br>
+<span style="margin-left:25px"></span>通过研究基于智能手机的指纹认证系统，采用新的解决方案降低原有系统使用成本，提高系统可用性，增强系统安全性，这既是课题研究的目的，也是课题研究最直接的意义所在。（2）促进指纹识别技术的发展。
+<br><br>
+<span style="margin-left:25px"></span>在传统的指纹识别系统中，基于传感器的接触式的指纹识别一直是研究热点，而对非接触式的指纹认别技术则鲜有研究。在本文研究当中，我们将对基于手机相机的非接触式的指纹识别技术进行重点研究。扩展指纹识别技术的研究视野。（3）推动REST风格的Web服务技术与实际应用相结合。
+<br><br>
+<span style="margin-left:25px"></span>新的指纹认证系统中我们将采用最新的Web服务技术进行服务器端应用开发，因此这将是REST风格的Web服务技术与实际应用相结合的一次实践。（4）促进二维码技术、数字水印技术和指纹识别技术的交叉综合研究。
+<br><br>
+<span style="margin-left:25px"></span>为了实现基于智能手机的指纹认证系统，我们需要在服务器端采用REST Web服务技术，而采用REST风格的Web服务就必须注意提升系统的安全性。因此，我们会结合采用数字水印技术和二维码技术提升系统安全性，最终促进二维码技术、数字水印技术和指纹识别技术的交叉综合研究。2.3 国内外研究概况
+<br><br>
+<span style="margin-left:25px"></span>2.4.3 国外研究概况
+<br><br>
+<span style="margin-left:25px"></span>在指纹识别领域国外起步较早，早在16世纪就出现了指纹匹配的相关思想。
+<br><br>
+<span style="margin-left:25px"></span>在20世纪初期，国外就已经采用了指纹特征作为身份识别的标识系统之一。在美国，FBI于20世纪60年代开始将指纹特征列入身份识别系统的研究并逐渐产生了成熟的研究框架；此后美国众多院校和科研机构开始着手进行指纹认证系统的研究和开发，产生了许多商业和开源的指纹识别系统[1]。美国国家标准与技术研究院NIST开发了一套开源的指纹识别系统NBIS Software[2]，使用该开源系统可以实现指纹特征提取和指纹匹配，随后大量的商业系统开始涌现。在美国以外，欧洲、日本、新加坡、澳大利亚等诸多国家都成立了相关指纹识别系统研究机构，如法国的Morph、日本NEC公司、新加坡南洋理工大学信号处理中心等。
+<br><br>
+<span style="margin-left:25px"></span>这些研究机构不断地解决着指纹识别系统中存在的一系列问题。然而，随着社会对指纹识别系统要求的提高，越来越多的指纹识别问题不断涌现，这些高校和科研院所仍然在指纹识别领域十分活跃。与指纹识别有关的活动主要有：国际指纹认证比赛FVC、国际生物认证会议ICBA、国际模式识别会议ICPR等。此外，美国、德国、日本等国家不仅在传统接触式的指纹识别领域有成熟的研究成果，在新兴的非接触式指纹识别领域也投入了许多人力物力进行研究，
+<br><br>
+<span style="margin-left:25px"></span>在基于手机相机的非接触指纹识别领域产生了许多研究成果，德国一些高校的实验室还开发了基于 Android智能手机的非接触指纹认证系统。2.4.4 国内研究概况
+<br><br>
+<span style="margin-left:25px"></span>国内在指纹识别领域起步相对较晚，大致在20世纪80年代开始进行指纹识别系统的相关研究。
+<br><br>
+<span style="margin-left:25px"></span>清华大学、北京大学、中国科学院自动化研究所等高校和科研机构对指纹识别技术进行了大量科技攻关，产生了许多研究成果，具体而言中科院自动化研究所建立了一整套指纹识别数据库，清华大学建立了 CAFIS系统，北京大学研制出了 Delta－ S系统[3]。这些高校和科研机构的不断努力，使我国指纹识别技术的研究水平逐渐接近和赶上了国际水平。近年来，我国在商业指纹识别领域取得了飞速的发展，产生了许多商业性的指纹识别系统，如指纹考勤系统、指纹门禁系统、指纹支付系统等，许多公司都研制了自己的商业化指纹识别产品。尽管我国在指纹识别系统领域发展迅勐，取得了十分显着的成就。
+<br><br>
+<span style="margin-left:25px"></span>但于此同时仍然存在着一系列的问题需要解决。首先，我国对指纹识别系统的研究大多偏向于学术研究领域，相关研究也大多是针对指纹识别算法的研究和优化，而从系统应用角度的研究相对较少。其次，多数商业指纹识别系统缺少自己核心技术，广泛使用着国外厂商的识别算法和功能模块[4]。从这一点来看，我国指纹识别系统的发展仍和发达国家存在着一定的差距。最后，我国指纹识别系统以接触式指纹识别研究为主，对非接触的指纹识别研究还比较少，也缺乏相应的系统原型。2.4 本文主要研究内容
+<br><br>
+<span style="margin-left:25px"></span>论文研究了传统指纹识别系统的几个主要缺陷，并对其进行了重新识别和改进。
+<br><br>
+<span style="margin-left:25px"></span>我们提出了一个基于Web的指纹认证系统解决方案，使用这种新的解决方案，在传统指纹识别系统中存在的成本和易用性问题将会得到有效解决。新的系统架构图如图1.2所示。
+<br><br>
+<span style="margin-left:25px"></span>图1.2 基于智能手机的指纹认证系统解决方案
+<br><br>
+<span style="margin-left:25px"></span>该系统具有以下几个方面的创新：
+<br><br>
+<span style="margin-left:25px"></span>（1）使用智能手机相机取代了传统的指纹传感器，节约系统成本并提高系统可用性。
+<br><br>
+<span style="margin-left:25px"></span>（2）使用Web Service技术提供跨平台的服务以解决成本问题。
+<br><br>
+<span style="margin-left:25px"></span>这种解决方案解决了系统成本与易用性问题，但与此同时也产生了系统安全性问题。
+<br><br>
+<span style="margin-left:25px"></span>由于用户的指纹信息通过HTTP协议进行传输，Web攻击者可以监听网络请求并从中截获用户的指纹数据，诸如信息截取、重放攻击等网络安全问题也随之产生。由于系统安全事关重大，对我们的系统进行安全保障十分重要。通过以上分析，论文将主要探讨加强安全的指纹认证系统。
+<br><br>
+<span style="margin-left:25px"></span>首先，我们提出了一个新的解决方案取代传统的指纹认证系统。在新的解决方案中，我们没有采用传统的指纹读取器等硬件设备获取用户指纹信息，我们采用了智能手机中的相机模块获取相应的用户信息。这样就导致了系统更加便利，同时也降低了系统成本。其次，我们采用Web Service技术提供加强安全的Web网络认证服务。我们加入了一些安全策略以提高系统安全性并防止重放攻击。最终我们开发了一个系统原型，该系统原型解决了现有解决方案的高成本、低效率问题，具有低成本、便利、安全等优势。论文的章节结构安排如下：
+<br><br>
+<span style="margin-left:25px"></span>第一章为绪论部分，讨论了现有指纹认证系统的问题，结合移动互联网、Web安全等技术提出了一个新的基于Web Service的加强安全的指纹认证解决方案。
+<br><br>
+<span style="margin-left:25px"></span>第二章为相关技术介绍，介绍了新解决方案所使用的几个关键技术，包括指纹识别技术，数字水印技术，Zxing开源框架、SOA技术与Web Service以及Nancy Framework。
+<br><br>
+<span style="margin-left:25px"></span>第三章为模型与需求，针对新的解决方案，建立了一些系统模型，并分析讨论了各个模型的问题，最终建立了一个比较安全可靠的系统模型，最后给出了需求建模。
+<br><br>
+<span style="margin-left:25px"></span>第四章为系统架构设计部分，首先介绍了与系统密切相关的业务逻辑，然后给出了基于REST的系统架构设计方案，最终进行了数据库设计与建模。
+<br><br>
+<span style="margin-left:25px"></span>第五章为系统实现部分，分模块实现了系统分析与设计中的功能，并详细探讨了系统中用到的关键算法。
+<br><br>
+<span style="margin-left:25px"></span>第六章为系统实验结果部分，从成本、可用性、安全性等角度分析系统试验结果。
+<br><br>
+<span style="margin-left:25px"></span>第七章为总结与展望部分，对基于Web的加强安全的指纹识别系统进行了总结，对系统开发中的核心问题和难点进行提炼，并对指纹认证系统的未来进行了展望。
+<br><br>
+<span style="margin-left:25px"></span>2 相关技术分析
+<br><br>
+<span style="margin-left:25px"></span>本章介绍与指纹认证系统相关的一些技术，由于基于Web的指纹认证是一个复杂的综合性系统，因此涉及到很多方面，这里只是对相关的重点技术进行简要介绍。
+<br><br>
+<span style="margin-left:25px"></span>3.5 指纹识别技术
+<br><br>
+<span style="margin-left:25px"></span>指纹识别技术是任何指纹识别系统的核心和关键技术。
+<br><br>
+<span style="margin-left:25px"></span>就指纹识别本身而言，大致可以分为以下5个步骤：第一步，指纹数据采集。
+<br><br>
+<span style="margin-left:25px"></span>利用相应的图像采集设备获取指纹图像信息。第二步，指纹预处理。
+<br><br>
+<span style="margin-left:25px"></span>由于采集到的指纹图像是未经加工的，初步的。因此，需要进行指纹图像的预处理，包括图像的增强处理，边缘检测，直方图均衡化等，经过处理的指纹图像应能达到下一步特征提取和匹配的要求。第三步，特征提取。
+<br><br>
+<span style="margin-left:25px"></span>根据指纹的特点，对指纹图像进行特征提取，获取指纹的特征点信息。第四步，指纹匹配。
+<br><br>
+<span style="margin-left:25px"></span>将两个指纹之间的特征点信息进行对比和匹配。第五步，处理匹配结果。
+<br><br>
+<span style="margin-left:25px"></span>根据指纹对比匹配的结果，判断两个指纹之间的相似度，决定指纹是否匹配成功[5]。在指纹识别领域，采用FAR（认假率）和FRR（拒真率）来衡量指纹识别算法的好坏。一般而言，一个好的指纹识别系统应该保证FAR和FRR尽可能的低。目前指纹识别技术发展比较成熟。
+<br><br>
+<span style="margin-left:25px"></span>出现了一些着名的开源软件和一大批商业软件，比较有名的有美国国家标准与技术研究院 NBIS课题组开源的 NBIS指纹识别系统，基于 NBIS的 SourceAFIS系统[6]，以及 CrossMatch公司的 U. Are. U SDK.许多指纹识别系统采用的指纹识别技术均基于此。这里简要介绍一下NBIS指纹识别软件。NBIS指纹识别软件是由美国国家标准与技术研究院NBIS课题组开源的指纹识别系统。该系统可在类 Unix环境下运行，提供了 Mindtct特征提取工具， IMGTOOLS指纹图像处理工具， BOZORTH3指纹匹配工具，在 Unix命令环境下可以方便地对指纹专有图像进行特征提取与处理。由于NBIS系统比较复杂，对系统环境配置要求较高，因此出现了基于NBIS的SourceAFIS开源库。SourceAFIS对NBIS进行了简化，抽取了Mindtct与BOZORTH3的核心功能，并与.net和Java技术相结合，提供了.net版本和Java版本更便于实际使用。Chris Stein， Claudia Nickel 和 Christoph Busch[7] 使用上述相关技术给出了一个基于智能手机相机的指纹识别系统解决方案，并使用android手机开发了原型系统。
+<br><br>
+<span style="margin-left:25px"></span>但是由于该系统并不是基于Web Service的，因此只实现了基本功能，许多安全性问题没有考虑。3.6 数字水印技术
+<br><br>
+<span style="margin-left:25px"></span>数字水印技术是保证信息来源真实可靠的重要的技术。
+<br><br>
+<span style="margin-left:25px"></span>客户端对原始信息加水印可以保证信息来源的准确可靠，服务器接收到客户端发送的水印信息之后，可以先分析水印信息，确保客户端的身份，之后在对水印信息进行去水印，对原始信息进行处理。如果客户端在加水印过程中融合了时间戳技术[8]和挑战应答技术[9]，就可以保证系统的安全性，加水印的数据既可以防止信息内容泄漏，又可以识别信息来源的真实性，防止重放攻击。因此，数字水印技术是加强系统安全的不二选择。客户端加水印，服务器端去水印。
+<br><br>
+<span style="margin-left:25px"></span>这种数字水印技术被称为可逆数字水印技术，是水印技术发展的难点之一[10]。实现数字水印的方法有很多，最基本的方法当属最低有效位算法[11]。 Waiton[12]最早提出了最低有效位算法来实现数字水印， Waiton使用图像中的低位信息存储密钥信息，用图像中的其他位信息生成密钥信息，这样低位存储的密钥信息就成为数字水印。用该种算法生成的可逆水印简单容易使用。A.Z.Tirkel， R.G.van Schyndel， C.F.Osborne[13]基于最低有效位算法提出了二维数字水印技术，并讨论了该技术在JPEG图像转换的适用性。Zhang Ning， Zang Ya-Li， Tian Jie[14]结合生物识别技术和密码技术提出了一个新的身份认证解决方案，并讨论了指纹识别技术和安全密钥技术的结合。3.7 ZXing开源框架
+<br><br>
+<span style="margin-left:25px"></span> ZXing Project全称 zebra crossing[15]，是由 Google公司开源的条形码与二维码图像处理库，
+<br><br>
+<span style="margin-left:25px"></span>能简单快速地生成和解析多种条形码和二维码，支持 UPC， EAN， Codebar， QR Code， Data Matrix多种条形码标准，该开源库采用 Java实现，并提供了多种其他语言接口。ZXing框架包含以下几大模块：code模块，条形码编码解码核心模块；JavaSe模块，JavaSe客户端模块；Android模块，Android客户端模块；Android-test模块，Android客户端测试模块；Android-integration模块，支持Intent集成条形码预览；Glass模块，简单的Google眼睛应用实例等。使用Zxing框架，可以在系统中简单方便地集成条形码处理功能，大大简化了系统处理条形码和二维码的难度。Eui-Hyun Jung 和 Seong-Yun Cho[16]研究了条形码技术和数字水印技术，然后提出了采用二维条形码的数字水印解决方案。3.8 SOA与Web Service
+<br><br>
+<span style="margin-left:25px"></span>SOA与Web Service技术是服务器端实现的重点与核心技术。
+<br><br>
+<span style="margin-left:25px"></span>这里将进行重点探讨。3.9.5 SOA
+<br><br>
+<span style="margin-left:25px"></span>SOA[17]即是面向服务的架构（service-oriented architecture）.简单的说，SOA是开发应用系统的一种新架构，在基于SOA的系统中，应用程序的构建过程类似于服务组件的组合过程。
+<br><br>
+<span style="margin-left:25px"></span>这些组件都是松耦合的并具有明确的接口定义，我们通常将这些组件称为服务。SOA技术架构的优点是实现系统的跨平台性和优良的可扩展性。举例而言，在我们的指纹认证系统中，我们需要实现一个 Android客户端和一个服务器端， Android客户端与服务器端通信，
+<br><br>
+<span style="margin-left:25px"></span>调用服务器端提供的 API接口服务以实现录入指纹和指纹认证的功能。在传统的软件体系结构下，客户端与服务器端的开发必须置于同一技术架构之下，如果客户端采用 Android技术实现，相应的，服务端也必须采用 Java EE技术实现；如果要开发Windows Phone的客户端，也必须开发对应的.net框架下的服务器程序。这种传统的软件架构模型是一种紧凑的架构体系，其优势在于服务器与客户端紧密协作，共同依赖相同类型的核心组件。然而，这种架构体系的缺点也是很明显的，最突出的问题的扩展性较差。如果采用.net技术进行客户端的开发，那么也意味着服务器端也必须采用同样的技术，这种传统的软件架构模型不适应移动互联网时代的业务发展需求。在移动互联网时代，一个服务往往需要支持多种客户端共同调用。
+<br><br>
+<span style="margin-left:25px"></span>举例来说，社交软件” Line”就需要为多种客户端提供多种服务，比如登录服务既需要支持 PC客户端进行登录，同时也要提供对 Android手机客户端和 iOS手机客户端的登录支持，甚至还要提供对 Web浏览器的登录支持。如果我们采用传统的系统架构，我们需要为每一种平台编写服务端代码，然而许多服务代码都是类似甚至是重复的，这样就不符合软件工程中的基本原则—— DRY[18]原则（ Don’ t Repeat Yourself）.在这种移动互联网的背景下， SOA架构迅勐发展。在SOA架构体系下，每一个应用功能被封装成服务，这些服务都是与具体平台无关的。
+<br><br>
+<span style="margin-left:25px"></span>客户端与服务器端的通信通过消息传递进行。通信的数据应符合数据传输的标准和规范，如 XML和 JSON.当客户端需要调用服务 API时，客户端向对应的服务接口发一条消息，服务器端解析消息并响应客户端消息请求，向客户端返回标准化数据，客户端解析标准化数据获取最终结果。这样就实现了从面向具体技术的架构向面向服务的架构的迁移。无论客户端采用android技术还是iOS技术，抑或是Web技术，甚至是桌面应用程序，他们都可以调用同一个服务接口，并且不需要修改服务器端代码。 SOA架构显着增强了系统的跨平台性和可扩展性，现在 SOA架构已然成为了移动互联网领域的主流架构模型，而 Web Service[19]是实现 SOA体系的一种具体技术。典型的SOA模型如图2.1所示。
+<br><br>
+<span style="margin-left:25px"></span>图2.1 SOA架构模型
+<br><br>
+<span style="margin-left:25px"></span>3.9.6 Web Service
+<br><br>
+<span style="margin-left:25px"></span>Web Service技术是一种实现SOA最为通用和主流的技术。
+<br><br>
+<span style="margin-left:25px"></span>它通过Web标准与协议提供Web服务。Web Service的目的在于实现异构系统间的相互协作[20]。经过数年的发展，目前Web Service技术已经发展为以下两大主要类型：
+<br><br>
+<span style="margin-left:25px"></span>（1）基于SOAP[21]的Web Service；
+<br><br>
+<span style="margin-left:25px"></span>（2）基于REST[22]的Web Service。
+<br><br>
+<span style="margin-left:25px"></span>基于SOAP的Web Service：
+<br><br>
+<span style="margin-left:25px"></span> SOAP是简单对象访问协议的缩写，被用来描述信息传输的格式， WSDL[23]是网络服务描述语言的缩写，用于描述 Web服务的公共接口， UDDI[24]是统一描述、发现和集成的缩写，用于管理、发布和查询 Web Service. SOAP使用两大应用广泛的协议——HTTP和XML. HTTP被用来实现RPC风格的SOAP传输，XML是其编码形式。通过SOAP，Web Service具有了优秀的扩展性，与特定技术、编程语言、平台的完全独立性。基于REST的Web Service:
+<br><br>
+<span style="margin-left:25px"></span> RT Fielding博士在其博士论文”Architectural Styles and the Design of Network-based Software Architectures[25]”中首次提出了REST风格的Web Service的基本概念。REST是表述性状态转移的缩写，REST风格具有以下几个特点：（1）首先，REST是一种架构风格，不是一个具体的标准；
+<br><br>
+<span style="margin-left:25px"></span>（2）REST风格是基于资源的架构风格；
+<br><br>
+<span style="margin-left:25px"></span>（3）REST架构风格的目的是实现一个组织良好的Web应用程序；
+<br><br>
+<span style="margin-left:25px"></span>（4）REST架构风格是对HTTP协议的真正充分利用：
+<br><br>
+<span style="margin-left:25px"></span>（a）它逻辑上通过URI来定位资源；
+<br><br>
+<span style="margin-left:25px"></span>（b）它通过HTTP请求头信息来判断客户端需要获取何种资源或是对资源进行何种操作；
+<br><br>
+<span style="margin-left:25px"></span>（ c）在 REST风格体系中，使用不同 HTTP的请求方法来实现 CRUD操作（增删改查操作），具体而言，
+<br><br>
+<span style="margin-left:25px"></span> GET操作可以获取资源， POST操作可以添加资源， PUT操作可以更新资源， DELETE操作可以删除资源，等等。REST风格的CRUD操作如图2.2所示。图2.2 REST风格的CRUD操作
+<br><br>
+<span style="margin-left:25px"></span> REST架构风格的以上特点使它比基于 SOAP的 Web Service更简单，更轻量，更能够完全地利用 HTTP协议，
+<br><br>
+<span style="margin-left:25px"></span> REST风格实际上代表了 HTTP设计之初的真正意图，因此，近年来 REST风格的 Web Service已经完全改变了 Web Service的状况，极大地适应了移动互联网的发展趋势，现在，主流的移动客户端开发都已经从 SOAP向 REST架构风格进行迁移。在我们的指纹认证系统中，为了配合android客户端的开发，服务器端同样也将采用REST风格的Web Service实现。3.9 Nancy Framework
+<br><br>
+<span style="margin-left:25px"></span>我们使用Nancy Framework来实现轻量级的REST风格Web Service.
+<br><br>
+<span style="margin-left:25px"></span> Nancy Framework是一个基于.net和mono平台的轻量级的Web框架，它遵循MVC模式[26]并被设计用来支持REST风格的Web Service. Nancy官方网站对Nancy框架的特征介绍如下：（1） Nancy 是一个轻量级用于构建基于HTTP的Web服务，基于 .
+<br><br>
+<span style="margin-left:25px"></span>NET 和 Mono 平台，框架的目标是保持尽可能多的方式，并提供一个super-duper-happy-path所有交互。（2）Nancy 设计用于处理DELETE， GET， HEAD， OPTIONS， POST， PUT和PATCH  等请求方法，并提供简单优雅的DSL[27]以返回响应。
+<br><br>
+<span style="margin-left:25px"></span>（3）Nancy和Asp.net MVC原理相似，但有自己的一套路由机制，在使用上更加易用，可以用Nancy快速开发一些网站。
+<br><br>
+<span style="margin-left:25px"></span>（4）Nancy并不依赖任何现有的框架，所以他可以运行在任何平台上面。
+<br><br>
+<span style="margin-left:25px"></span>下面介绍Nancy框架的核心思想。
+<br><br>
+<span style="margin-left:25px"></span>3.10.7 MVC
+<br><br>
+<span style="margin-left:25px"></span>Nancy框架的设计灵感来源于Ruby中的Sinatra框架[28]，他们的基本思想都是MVC模式，MVC模式是模型－视图－控制器模式的缩写。
+<br><br>
+<span style="margin-left:25px"></span>模型是应用系统用于描述数据逻辑的部分，通常用于封装数据对象以存储数据。
+<br><br>
+<span style="margin-left:25px"></span>视图是应用系统中描述显示逻辑的部分，视图负责展示给用户的界面逻辑，视图中的数据通常通过模型层获取。控制器是应用系统中业务逻辑处理的部分，负责从视图中读取数据，处理用户输入跳转，将数据发送给模型等业务逻辑处理，是系统的控制中枢，也是 MVC模式的核心部分。图2.3 MVC核心工作流
+<br><br>
+<span style="margin-left:25px"></span>图2.3展示了MVC模式的核心工作流：
+<br><br>
+<span style="margin-left:25px"></span>（1）首先，用户向应用程序程序发送请求，等待服务端响应
+<br><br>
+<span style="margin-left:25px"></span>（2）控制器接收用户请求，然后由控制器决定是从模型中读取数据还是直接将用户请求交给对应的视图进行响应。
+<br><br>
+<span style="margin-left:25px"></span>（3）控制器向模型层发送数据请求。
+<br><br>
+<span style="margin-left:25px"></span>（4）模型层从数据库中读取请求的数据，并将获取到数据返回给控制器。
+<br><br>
+<span style="margin-left:25px"></span>（5）控制器将模型返回的数据发送给响应的处理视图。
+<br><br>
+<span style="margin-left:25px"></span>（6）视图层通过从模型中获取数据填充视图内容，并将最终的HTML结果返回给控制器。
+<br><br>
+<span style="margin-left:25px"></span>（7）控制器将结果视图返回给用户。
+<br><br>
+<span style="margin-left:25px"></span>通过MVC模式，实现了应用系统业务逻辑和表现逻辑的分离[29]，数据逻辑和数据库系统的分离，因此降低了模块之间的耦合性，也便于前后端开发人员的相互协作[30]。
+<br><br>
+<span style="margin-left:25px"></span>因此越来越多的应用系统采用MVC模式实现，于此同时也产生了大量优秀的遵循MVC模式的框架，如Ruby on Rails[31]， Java Spring MVC，ASP.net MVC等等。我们所采用的Nancy框架也是.net平台上的一个轻量级的MVC框架。3.10.8 Nancy框架中的MVC实现
+<br><br>
+<span style="margin-left:25px"></span>Nancy框架是.net平台下基于MVC模式的轻量级Web框架，一个Nancy项目结构如图2.4所示。
+<br><br>
+<span style="margin-left:25px"></span>图2.4 Nancy项目结构
+<br><br>
+<span style="margin-left:25px"></span>在Nancy框架中，Model表示模型模块，Views表示视图模块，Module表示控制器模块。
+<br><br>
+<span style="margin-left:25px"></span>（1）控制器遵循REST风格，其基本的工作模式是：
+<br><br>
+<span style="margin-left:25px"></span>当用户在浏览器中请求http:// hostaddress/时， Nancy框架中的控制器类会首先通过 Uri查找对应的控制器，这种机制被称为路由机制，这种路由机制也是 Nancy框架实现 Rest风格的 Web Service的核心。当用户向服务器根目录 Uri发送 GET请求时，控制器会首先通过路由机制查找 GET[”/”]控制器，在找到响应的控制器之后，用户请求会被对应的控制器进行处理。而对应的控制器可能会调用对应的视图资源或模型资源来响应用户请求。（2）视图遵循HTML作为其基本风格，在Nancy框架中，官方支持的视图引擎是Radar视图引擎，Radar引擎的语法与HTML基本类似。
+<br><br>
+<span style="margin-left:25px"></span>（3）视图层将数据库组织成相应的对象，并支持大多数的ORM框架。
+<br><br>
+<span style="margin-left:25px"></span>3.10 本章小结
+<br><br>
+<span style="margin-left:25px"></span>本章介绍了基于智能手机的指纹认证系统的相关技术，包括指纹识别技术、数字水印技术、二维码生成技术、SOA与Web Service技术、Nancy框架等。
+<br><br>
+<span style="margin-left:25px"></span>由于指纹认证系统是一个复杂的综合性系统，因此需要进行交叉综合研究。在论文中，我们也将结合以上多种核心技术来构建我们的指纹认证系统原型。3 系统需求与建模分析
+<br><br>
+<span style="margin-left:25px"></span>本章探讨的主要问题是模型与需求，将主要讨论指纹认证系统的安全策略问题，通过讨论相应的安全策略确立一种优良的系统解决方案模型，
+<br><br>
+<span style="margin-left:25px"></span>在此基础上提出需求建模。在本章中，首先我们会简要地分析系统安全威胁；其次我们会讨论加强系统安全的传统解决方案；然后我们提出了基于可逆数字水印的新的安全解决方案，并对其进行了逐步改进。最后我们确立了解决方案模型和系统需求模型。4.11 安全威胁及其防御
+<br><br>
+<span style="margin-left:25px"></span>为了发现指纹认证系统中的安全问题，首先我们需要从总体上了解Web系统中存在的安全威胁及其经典防御方案。
+<br><br>
+<span style="margin-left:25px"></span>在基于Web的指纹认证系统中将会产生以下几种安全问题：
+<br><br>
+<span style="margin-left:25px"></span>（1）会话劫持[32]。
+<br><br>
+<span style="margin-left:25px"></span>会话劫持的目的往往在于窃取信息内容本身。这种类型的安全攻击通常被认为是数据安全威胁。在指纹认证系统中，客户端需要通过网络向服务器端传输用户指纹数据，在传输过程中，一旦系统遭到攻击，客户端发送的指纹图像数据就有可能遭到窃取，用户的身份数据就会遭到泄漏。会话劫持的基本原理如图3.1所示。图3.1 会话劫持原理
+<br><br>
+<span style="margin-left:25px"></span>（2）重放攻击[33]。
+<br><br>
+<span style="margin-left:25px"></span>重放攻击（ Replay Attacks）又称重播攻击、回放攻击或新鲜性攻击（ Freshness Attacks），是指攻击者发送一个目的主机已接收过的包，来达到欺骗系统的目的，主要用于身份认证过程，破坏认证的正确性。攻击者利用网络监听或者其他方式盗取认证凭据，之后再把它重新发给认证服务器。从这个解释上理解，加密可以有效防止会话劫持，但是却防止不了重放攻击。重放攻击任何网络通讯过程中都可能发生。一个经典的重放攻击如图3.2所示。图3.2 重放攻击示例
+<br><br>
+<span style="margin-left:25px"></span>在上图中，Bob充当了服务器端的角色，Alice将其个人身份认证信息（用户名、密码）加密后发送给Bob进行认证并认证通过。
+<br><br>
+<span style="margin-left:25px"></span>于此同时，网络中间人劫持了这次会话，中间人截获了 Alice向 Bob发送的认证数据，尽管该数据是加密的，但中间攻击人并不需要知道数据真实的内容，他只是伪装成 Alice再次向 Bob发送了同样了认证信息， Bob接收到了同样的认证信息，再次通过了网络中间人的认证请求，并将网络攻击人误认为是 Alice.重放攻击的基本原理如图3.3所示。图3.3 重放攻击原理
+<br><br>
+<span style="margin-left:25px"></span>（3）数据篡改。
+<br><br>
+<span style="margin-left:25px"></span>这种类型的网络攻击可以认为是重放攻击的扩展。攻击者利用重放攻击破坏系统认证并进入系统，之后攻击者可以很容易地向服务器发送伪造的数据，甚至可以对服务器系统进行 SQL注入攻击和系统数据篡改。其基本模式如图3.4所示。图3.4 数据篡改原理
+<br><br>
+<span style="margin-left:25px"></span>针对以上几类安全威胁，基本的防御措施如下：
+<br><br>
+<span style="margin-left:25px"></span>（1）图像加密。
+<br><br>
+<span style="margin-left:25px"></span>针对上述第一种攻击类型，通常的解决方法是图像加密。在客户端向服务器发送图像文件之前，首先利用特定的加密算法对图像信息内容进行加密，再将加密后的图像发送给服务器。服务器接收到图像信息之后，利用对应的算法进行图像解密。这种情况下，即使攻击者窃取了图像信息，他仍然无法读取真正的信息内容，有效防止了信息泄漏。图像加密原理如图3.5所示。图3.5 图像加密原理
+<br><br>
+<span style="margin-left:25px"></span>（2）时间戳认证[34]。
+<br><br>
+<span style="margin-left:25px"></span>针对重放攻击，一种行之有效的办法是采用时间戳认证。采用时间戳认证必须首先保证客户端与服务器端的同步，在此基础上，首先服务器端实时生成随机动态密钥，其次客户端发送请求获取该密钥，最后客户端向服务器端发送用户名和随机密钥以登录系统。在这种情况下，即使中间人截获了登陆信息，密钥的有效期也只有非常短暂的一小段时间。一旦服务器重新生成随机密码，中间人截获的信息就是无效的。时间戳认证的原理如图3.6所示。图3.6 时间戳认证原理
+<br><br>
+<span style="margin-left:25px"></span>（3）挑战应答认证。
+<br><br>
+<span style="margin-left:25px"></span>挑战应答认证是另一种防止重放攻击的有效方法[35]。其基本模型如下所示：第1步：
+<br><br>
+<span style="margin-left:25px"></span>客户端发起登陆请求。（可假设登陆请求是一个Get请求）第2步：
+<br><br>
+<span style="margin-left:25px"></span>服务器端生成一个随机数K＝random(num)，并将K返回给客户端。于此同时，服务器端缓存中保存该K值。第3步：
+<br><br>
+<span style="margin-left:25px"></span>客户端计算R＝Hmac(K，P)，在该公式中，K代表密钥，是服务器返回的随机数，P代表用户密码，Hmac是一个用于加密的哈希函数。第4步：
+<br><br>
+<span style="margin-left:25px"></span>服务器端从数据库读取用户密码，并进行与步骤3中相同的哈希函数运算 R’＝ hmac( K， P’)，然后比较 R和 R’，如果二者相等，用户登陆系统成功。在这种模型下，中间人只能获取传输中的K值和R值，由于K值是一个随机数，R值是一个哈希函数结果，因此这两个值都是无意义的。
+<br><br>
+<span style="margin-left:25px"></span>中间人无法通过这两个值获取用户密码，也无法发起重放攻击。因此提升了系统的安全性。请求应答认证的原理如图3.7所示。图3.7 请求应答认证原理
+<br><br>
+<span style="margin-left:25px"></span>4.12 原有解决方案
+<br><br>
+<span style="margin-left:25px"></span>4.13.9 安全威胁
+<br><br>
+<span style="margin-left:25px"></span>正如我们在论文3.1中讨论的那样，Web系统中存在多种类型的安全攻击。
+<br><br>
+<span style="margin-left:25px"></span>其中一种攻击是会话劫持，会话劫持的目的在于窃取信息内容本身。另一种攻击是重放攻击，重放攻击的目的主要在于破坏认证的有效性。在我们的指纹认证系统中，网络攻击者会尝试劫持包含有用户指纹信息的用户数据包，这是一种典型的会话劫持类攻击，攻击者的目的在于盗取用户的指纹信息，在这种情况下，用户信息将会被窃取。此外，攻击者在截获了用户发送的指纹数据包之后，会假冒用户向服务器再次发送该指纹数据包，以骗取服务器信任，即使用户发送的指纹数据包经过加密也无法防止这种攻击，这种攻击是一种典型的重放攻击。攻击者通过重放攻击以达到欺骗认证服务器的目的，这种情况下服务器会把攻击者认定为原始的用户，通过指纹认证。可见在我们的指纹认证系统中同时包含了以上两类安全隐患，指纹认证系统应该是足够安全的。
+<br><br>
+<span style="margin-left:25px"></span>因此，我们尝试设计安全子系统以加强系统的安全性，最终使我们的系统可以同时防御会话劫持和重放攻击两种类型的攻击。4.13.10 通常的解决方案
+<br><br>
+<span style="margin-left:25px"></span>文件加密和数字签名是加强系统安全性的最通用的解决方案[36]。
+<br><br>
+<span style="margin-left:25px"></span>其中文件加密主要用于防止信息内容泄漏，而数字签名主要用来确保信息来源的真实可靠性。文件加密：
+<br><br>
+<span style="margin-left:25px"></span>文件加密的基本流程是通过特定的算法对原始文件信息进行编码，使经过加密的文件变的不可读，我们可以将其称之为密文。在没有密钥的情况下原始文件信息是无法获取的。通过这种方式我们可以有效的防止数据被非法窃取。对应的，文件加密的逆过程也被称为文件解密。数字签名:
+<br><br>
+<span style="margin-left:25px"></span> 数字签名技术本质上是通过数学方法来验证消息、软件和数字文件来源的真实性和可靠性。数字签名的基本流程如图3.8所示。图3.8 数字签名基本流程
+<br><br>
+<span style="margin-left:25px"></span>从图3.8中我们可以了解到数字签名技术的工作原理[37]。
+<br><br>
+<span style="margin-left:25px"></span>首先，数据发送方使用他的私钥对他需要发送的信息进行加密，这样他就获得了签名消息；其次，数据发送方讲签名消息发送给接收方。数据接收方接收签名消息，并利用公钥对签名消息进行解密，解密后，接收方将获得解密后的 Hash值，如果接收方解密后的 Hash值与发送方的 Hash值相匹配，则证明消息在签名之后没有被篡改，否则则证明数据在签名之后遭到攻击者攻击，信息内容已经被改变。4.13.11 传统解决方案的问题
+<br><br>
+<span style="margin-left:25px"></span>上述传统解决方案对于加强系统安全性和抵御网络攻击能够起到良好的效果。
+<br><br>
+<span style="margin-left:25px"></span>但是应用在我们的指纹识别系统中仍然有一些缺陷和问题。首先是系统复杂性的问题，数字签名需要另外一整套复杂的架构，此外，我们可能需要将安全系统拆分成两个子系统，一个子系统用来进行文件加密，另一个系统进行数字签名。
+<br><br>
+<span style="margin-left:25px"></span>这就导致了系统架构的进一步复杂化。其次，上述两种解决方案是一种通用的解决方案，并没有考虑到指纹识别系统的特殊性，也没有结合指纹图像的特征。鉴于此，我们提出了一个新的安全解决方案。4.13 基于数字水印解决方案
+<br><br>
+<span style="margin-left:25px"></span>为了克服传统解决方案的上述缺陷，在本部分我们将提出一个新的解决方案。
+<br><br>
+<span style="margin-left:25px"></span>首先，我们会分析在没有加入安全措施的情况下系统可能产生的问题，之后我们会在这些问题的基础上，对解决方案进行逐步改进和优化。4.14.12 安全漏洞
+<br><br>
+<span style="margin-left:25px"></span>首先，在不采用文件加密和数字签名的情况下，我们会发现原始的指纹认证系统会产生如图3.9所示的安全漏洞。
+<br><br>
+<span style="margin-left:25px"></span>图3.9 安全漏洞
+<br><br>
+<span style="margin-left:25px"></span>在图3.9所示的业务场景下，用户 A希望采用本系统进行身份认证，该名用户采用智能手机采集他的指纹图像，
+<br><br>
+<span style="margin-left:25px"></span>之后用户 A直接向服务器发送该图片以进行匹配。然而此时网络攻击者B正在监听此次通信过程，网络攻击者B是一个恶意监听者并且盗取了用户A的指纹图像信息。几分钟之后，攻击者B假扮A向服务器发送刚刚窃取到的指纹图像。这样系统会把攻击者B当作是真正的用户A，B就成功获取了系统认证。在这种情况下，由于B获得了与A相同的系统认证，对于用户A而言显然是不安全的。可见，原始的指纹认证系统无法防止会话劫持和重放攻击，我们需要在系统中加入一些安全策略以增强系统的安全性。4.14.13 第一次改进
+<br><br>
+<span style="margin-left:25px"></span>为了增强系统安全性，我们在系统中引入了安全模块。
+<br><br>
+<span style="margin-left:25px"></span>引入安全模块的两个关键点在于：
+<br><br>
+<span style="margin-left:25px"></span>（1）为了防止指纹图片信息泄密，客户端不应该将最原始的指纹图像信息发送给服务器。
+<br><br>
+<span style="margin-left:25px"></span>（2）为了防止重放攻击，系统可以采用一种类似于一次性密码本的加密技术[38]。
+<br><br>
+<span style="margin-left:25px"></span>这意味着系统需要生成一个单次有效的密钥。为了实现上述系统，我们可以基于时间戳来产生密钥。当用户需要进行指纹认证时，服务器端首先检查时间戳密钥，如果时间戳密钥正确，再进行指纹认证操作，否则系统不能确定请求来源的可靠性，就不再进行指纹认证操作。为了实现以上两个关键点，我们结合了二维码技术来构建指纹认证系统。
+<br><br>
+<span style="margin-left:25px"></span>首先，服务器端根据时间戳来生成对应的二维码图片然后将该图片发送给客户端。在这种情况下，由于二维码图片包含有时间戳信息，因此可以作为一次性密钥来防止重放攻击。此外，我们可以将二维码图片和原始的指纹图片相结合，这样客户端发送图片时可以采用新的图片代替原始的指纹图片。最终，加入了二维码技术的安全模块满足了上述两点安全需求。图3.10 第一次改进策略
+<br><br>
+<span style="margin-left:25px"></span>改进后的系统解决方案如图3.10所示。
+<br><br>
+<span style="margin-left:25px"></span>在这种情况下，用户A首先拍摄指纹图片，其次他向服务器发送请求，服务器接收到用户认证请求后首先根据当时的时间戳生成相应的二维码图片并将该图片返回给客户端。客户端接收到二维码图片之后，将拍摄到的原始的指纹图片放置于二维码图片中心位置产生了一个新的图片。接着，客户端将新的图片发送给服务器，服务器端接收到新的图片以后，首先对二维码进行解码获得时间戳信息，判断时间戳信息是否正确。如果与服务器端生成时保存的时间戳一致，系统就将指纹图片提取出来发送给匹配模块，否则服务器会直接返回认证失败信息给客户端。现在我们再来分析新系统的安全性。
+<br><br>
+<span style="margin-left:25px"></span>此时，攻击者B仍然能够通过会话劫持窃取包含二维码和指纹的新图片。但是，由于图片是二维码和指纹图片的混合，攻击者不能再直接获取原始的指纹图片了。更重要的是，攻击者不再能够进行重放攻击。如果攻击者 B再次向服务器发送他刚刚劫持到的图片，图片中的时间戳已经不再有效，原因在于时间戳认证在 B重发消息之前已经被认证过了，而时间戳仅一次有效。因此，服务器不会将攻击者B发送的图片分发给匹配模块作进一步处理。服务器会直接返回失败消息给攻击者。由此可见，指纹认证系统的安全性已经得到了显着的改进与增强。
+<br><br>
+<span style="margin-left:25px"></span>然而该系统仍然是不安全的。攻击者仍有许多办法来获取原始的指纹图片，攻击者只需要将截获到的新图片进行中心部分裁剪就可以轻松地还原出原始的指纹图片，再他们获取到了原始的指纹图片以后，攻击者可以重新向服务器发送认证请求以获取新的二维码图片。这样，他们只需要将二维码图片与原始图片进行结合就可以再次将图片发送给服务器进行认证。这又变成了一种重放攻击，在这种场景下，由于时间戳消息是全新可用的，攻击者可以通过服务器端的时间戳检查。这样攻击者就成功通过了系统认证。为了防止这种情况的发生，该解决方案仍然需要进一步改进。4.14.14 第二次改进
+<br><br>
+<span style="margin-left:25px"></span>这次改进的核心思想和第一次改进基本相同。
+<br><br>
+<span style="margin-left:25px"></span>上述解决方案的主要问题在于，客户端只是简单直接地将指纹图片与二维码图片进行了拼接，由于指纹图片本身并没有被隐藏起来，这使得新产生的图片很容易被破解。因此，如果我们能够采用一种算法使指纹图片隐藏起来，攻击者就很难对截获到的图片进行还原。这样系统安全性就会大大提高。此时，我们将可逆数字水印技术加入我们的指纹认证系统中。
+<br><br>
+<span style="margin-left:25px"></span>采用这一技术，我们可以轻松地将原始指纹图片和二维码图片进行组合，于此同时可以将指纹图片隐藏起来。这样，就可以把指纹图片作为数字水印隐藏起来，而不是将其直接发送给服务器。图3.11 第二次改进策略
+<br><br>
+<span style="margin-left:25px"></span>图3.11展示了本次改进后新解决方案的基本流程。
+<br><br>
+<span style="margin-left:25px"></span>该解决方案与第一次改进后的方案基本类似。我们只是采用了数字水印代替了之前的直接组合。客户端把指纹图片作为数字水印并将其编码进二维码图片当中。服务器端接收包含数字水印的二维码图片，然后调用解码模块对二维码图片进行解码。解码之后，服务器端会将原始二维码图片和原始的指纹图片进行分离，接着服务器就可以检查二维码中的时间戳信息，如果时间戳正确，则对指纹图片进行匹配操作，否则返回认证失败。经过这样的加密，系统安全性显着提高。
+<br><br>
+<span style="margin-left:25px"></span>攻击者再也不能很轻易地获取原始的指纹图片了。攻击者只能截获到一张二维码图片，而这张图片本身对身份认证是没有任何意义的。如果攻击者尝试还原原始的指纹图片信息，他们必须知道相应的数字水印加密算法，否则他们就无法破解出真实的指纹信息。然而，一旦系统加密算法被泄漏，攻击者仍然可以破解出原始的指纹信息，这样一来，系统仍然是不够安全的。因此，我们还需要对指纹系统进行进一步的改进。4.14.15 第三次改进
+<br><br>
+<span style="margin-left:25px"></span>第三次改进则非常简单。
+<br><br>
+<span style="margin-left:25px"></span>我们在最终的系统中加入密钥机制。在第二次系统改进的基础上，我们采用用户密码作为密钥对上次改进中的图片进行再加密，客户端将再加密之后的图片发送给服务器。服务器端接收到图片以后首先根据用户名在数据库中查找相应的用户密钥，然后根据用户密钥对图片进行解密，在解密之后，服务器端执行与上一部分相同的操作即可。第三次改进如图3.12所示。图3.12 第三次改进策略
+<br><br>
+<span style="margin-left:25px"></span>这样，攻击者必须通过掌握了系统加密算法和用户密钥之后才能还原出原始的指纹图像，大大增加了破解的难度和成本。
+<br><br>
+<span style="margin-left:25px"></span>因此，我们认为经过三次改进后的系统已经足够安全。4.14 需求建模
+<br><br>
+<span style="margin-left:25px"></span>下面我们基于上述解决方案分析对系统进行需求建模[39]。
+<br><br>
+<span style="margin-left:25px"></span>本部分采用面向对象的需求分析方法对上述解决方案进行需求分析，首先给出了系统整体用例图，然后对用例图进行了具体描述。4.15.16 总体用例图
+<br><br>
+<span style="margin-left:25px"></span>系统总体用例图如图3.13所示。
+<br><br>
+<span style="margin-left:25px"></span>图3.13 系统总体用例图
+<br><br>
+<span style="margin-left:25px"></span>4.15.17 用例描述
+<br><br>
+<span style="margin-left:25px"></span>从总体用例图可以看出，系统参与者主要用两类：
+<br><br>
+<span style="margin-left:25px"></span>游客Guest和用户User，而由于本系统和拥护身份认证等敏感操作息息相关，因此本系统游客除了注册登录以外并没有任何可用操作。对于游客而言，他们只有用户注册和用户登录两个用例。游客进行登录操作以后，游客就转化为用户User. User是本系统的核心参与者，拥有指纹录入和指纹认证两个用例。这两个用例又分别包含一些子用例。现进行详细描述。指纹录入用例，是用户通过指纹机将自己的所有指纹录入进指纹认证系统后台数据库中，指纹录入是指纹认证的基础。
+<br><br>
+<span style="margin-left:25px"></span>该用例包含2个子用例：上传身份信息用例和上传指纹图片用例。在上传指纹图片之前，必须对指纹本身的用户信息先录入后台数据库，即上传身份信息，在上传身份信息之后，才可以开始正式的指纹图片录入。指纹认证用例，是用户通过手机拍照验证自身指纹是否匹配的过程。
+<br><br>
+<span style="margin-left:25px"></span>该用例包含4个子用例：二维码生成用例、数字水印生成用例、来源审核用例、指纹对比用例。其中二维码生成、数字水印、来源审核都属于系统的安全模块，用于增强系统的安全性，防止会话劫持和重放攻击。二维码生成用例会根据请求的时间戳生成相应的二维码图像；数字水印用例会将二维码图像和原始指纹图片进行可逆水印计算生成数字水印；来源审核用例主要用来检查数字水印中包含的时间戳信息以判断请求来源的合法性；指纹对比用例主要用来比较用户指纹图片的匹配度，是指纹匹配的核心用例。4.15 本章小结
+<br><br>
+<span style="margin-left:25px"></span>本章首先讨论了传统指纹识别系统中存在的安全威胁及其防御策略，接着分析了传统指纹安全策略中存在的不足和问题，
+<br><br>
+<span style="margin-left:25px"></span>在此基础上采用逐步改进的方法建立了一个基于数字水印的解决方案保证了系统的可用性和安全性，并对系统重放攻击等安全威胁场景进行特别防御。在确立了基于数字水印的解决方案的基础上，采用面向对象方法进行了系统需求建模，给出了系统用例图。4 指纹认证系统设计
+<br><br>
+<span style="margin-left:25px"></span>本章探讨的主要问题是系统的架构设计。
+<br><br>
+<span style="margin-left:25px"></span>在确定了系统的解决方案和需求建模之后，必须根据相关的用例模型并结合特定的技术进行系统设计，系统设计与特点的技术选型息息相关。本章共分为3部分，第一部分依据系统用例分析结合特定的 API函数分析系统业务逻辑，第二部分基于 REST Web Service给出了系统架构设计整体方案和详细设计方案，第三部分在面向对象设计的基础上进行数据库设计。5.16 系统业务逻辑
+<br><br>
+<span style="margin-left:25px"></span>本部分讨论系统业务逻辑，首先对系统组件进行详细划分，然后对整个系统的基本业务逻辑进行阐述。
+<br><br>
+<span style="margin-left:25px"></span>5.17.18 系统组件
+<br><br>
+<span style="margin-left:25px"></span>系统组件包含以下四部分：
+<br><br>
+<span style="margin-left:25px"></span>（1）客户端：
+<br><br>
+<span style="margin-left:25px"></span>包含Android智能手机、指纹数据采集子模块、指纹特征提取子模块、指纹加密子模块。（2）服务器端：
+<br><br>
+<span style="margin-left:25px"></span>包含Web服务器、指纹解密子模块、用户认证子模块、指纹匹配子模块。（3）第三方组件：
+<br><br>
+<span style="margin-left:25px"></span>包含指纹匹配SDK，SourceAFIS SDK、NBIS SDK、Zxing.net、Nancy Framework等组件。（4）数据库：
+<br><br>
+<span style="margin-left:25px"></span>包含指纹图像数据库、用户数据库等。5.17.19 工作流分析
+<br><br>
+<span style="margin-left:25px"></span>系统基本业务流程可大致分为以下几个步骤：
+<br><br>
+<span style="margin-left:25px"></span>（1）指纹图像采集：
+<br><br>
+<span style="margin-left:25px"></span>用户登录android客户端，android客户端调用手机相机和图像采集模块获取用户指纹图像。（2）指纹图像处理与特征提取：
+<br><br>
+<span style="margin-left:25px"></span>客户端调用图像处理模块对指纹图片进行预处理，在此基础上对用户指纹进行特征提取。（3）图像加密：
+<br><br>
+<span style="margin-left:25px"></span>首先客户端接收来自服务器端生成的二维码图片，然后客户端调用加密模块对原始指纹图片和二维码图片进行数字水印加密。（4）图片上传：
+<br><br>
+<span style="margin-left:25px"></span>客户端调用Web API将加密后的指纹图片上传至服务器。（5）图像解密：
+<br><br>
+<span style="margin-left:25px"></span>服务器端调用解密模块对加密的指纹图片进行解密，解密后服务器同时获得二维码图片和原始指纹图片。（6）用户认证：
+<br><br>
+<span style="margin-left:25px"></span>服务器端调用用户认证子模块来检查二维码图片中的时间戳信息是否一致以确保用户来源的真实性。（7）指纹匹配：
+<br><br>
+<span style="margin-left:25px"></span>服务器端调用指纹匹配SDK对用户上传的指纹图片和数据库中保存的指纹信息进行匹配和对比，得到相应的指纹匹配结果。（8）结果显示：
+<br><br>
+<span style="margin-left:25px"></span>服务器将匹配结果返回给客户端，客户端根据匹配分数判断用户是否通过指纹匹配认证。指纹认证过程完成。系统业务流程图如图4.1所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.1 系统业务流程
+<br><br>
+<span style="margin-left:25px"></span>5.17 基于REST的系统架构设计
+<br><br>
+<span style="margin-left:25px"></span>本部分是系统设计部分，首先进行系统整体架构设计，然后介绍了系统类设计方案，最后分模块进行了模块详细设计。
+<br><br>
+<span style="margin-left:25px"></span>5.18.20 整体架构设计
+<br><br>
+<span style="margin-left:25px"></span>在介绍系统架构设计之前，首先介绍系统的技术选型。
+<br><br>
+<span style="margin-left:25px"></span>在不考虑第三方类库的平台支持情况下，由于指纹认证系统规模并不大，因此可以采用一些快速开发框架如 Ruby on Rails或 Node. js进行开发[40]，并将服务器部署在 Linux的 Nginx服务器上，但是由于系统中采用了 SourceAFIS指纹识别开源库，并且该开源库仅提供了完善的. net版本。因此本系统在技术选型过程中，底层指纹匹配服务只能基于.net构建。最终采用了windows 10作为操作系统平台，IIS8作为Web服务器，MySql 5.6作为数据库服务器，.net Nancy Framework作为服务端开发框架。使用Nancy Framework提供Web API，顶层实现了Android端、iOS端等客户端。系统整体架构图如图4.2所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.2 系统整体架构图
+<br><br>
+<span style="margin-left:25px"></span>从整体架构图中可以看出，系统共分为5层。
+<br><br>
+<span style="margin-left:25px"></span>底层为数据库层，采用 MySQL提供 DBMS服务，其次为模型层，在 Nancy Framework中建立相应的模型类，中间为控制器层，使用 Nancy Framework中的控制器组件编写具体的系统业务逻辑，上层为 API层，通过路由机制提供对应的 Web API服务，向应用层提供所需的 JSON数据，最顶层为应用层，包括但不限于 Android端、 iOS端、 Web端等具体的应用服务，这些应用服务通过解析 Web API中提供的 JSON数据填充其视图。5.18.21 系统类设计
+<br><br>
+<span style="margin-left:25px"></span>在整体架构设计的基础上，在Nancy框架的基础上进行类设计。
+<br><br>
+<span style="margin-left:25px"></span>类设计的基本思路是：（1）数据层与控制层分离，控制层与表现层分离，反映边界类和实体类的区别，反映实体类之间之间的继承与组合关系。
+<br><br>
+<span style="margin-left:25px"></span>（2）通过设计接口实现面向接口的设计而非面向实现的设计[41]。
+<br><br>
+<span style="margin-left:25px"></span>（3）设计控制器类操作数据实体类
+<br><br>
+<span style="margin-left:25px"></span>（4）实体类与实体类之间通过关联类建立联系。
+<br><br>
+<span style="margin-left:25px"></span>系统类图整体设计如图4.3所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.3 系统整体类设计
+<br><br>
+<span style="margin-left:25px"></span>先对系统类设计进行详细说明。
+<br><br>
+<span style="margin-left:25px"></span>首先定义实体类接口，实体类接口定义了实体类应具备哪些操作，在我们的指纹认证系统中，我们定义了IUserOperation接口和IFingerprintOperation接口。
+<br><br>
+<span style="margin-left:25px"></span>IUserOperation接口定义了User实体类应该具有的操作，具体包含了insertToUser方法和isExistUser方法，分别用于添加用户和判断用户是否存在；IFingerprintOperation接口定义了insertToFingerprint方法和getImages方法，分别用于添加指纹图片和获取所有指纹图片。其次定义实体类，实体类反映了该系统实际操作的对象，在本系统中共定义了User类和Fingerprint类两个实体类。
+<br><br>
+<span style="margin-left:25px"></span>User类定义了用户所具有的属性，包括UserId和UserName属性，并实现了IUserOperation接口，Fingerprint类定义了指纹具有的属性，包括fpId，fpName，sampleNumber，userId和fpPath属性，并实现了IFingerprintOperation接口。接下来定义实体关联类，关联类反映了用户实体和指纹实体之间一对多的关系。
+<br><br>
+<span style="margin-left:25px"></span>共定义了一个关联类UserFingerprint类，共包含3个属性，ufID属性，userId属性和fpId属性。通过此类建立起User类和Fingerprint类之间的关系。最后定义控制器类，我们主要定义了UserController和FingerprintController两个控制器类用于操作相应的数据实体类。
+<br><br>
+<span style="margin-left:25px"></span>两个控制器类分别以来对应的数据实体类。其中UserController类定义了insertUser和getUser两个方法，分别用于添加用户和获取所有用户；FingerprintController类定义了uploadFingerprint方法、matchFingerprint方法、generateQrcode方法和verificationUser方法，分别用于用户上传指纹、用户匹配指纹、生成二维码和验证用户真实性。在系统中，对应于数据实体类和控制器类，实际上还有视图类，但是由于视图类基本上都是负责显示逻辑的 HTML代码，
+<br><br>
+<span style="margin-left:25px"></span>与系统业务逻辑关联并不大，因此并不刻意反映在系统整体类图中。5.18.22 分模块详细设计
+<br><br>
+<span style="margin-left:25px"></span>在整体类图的基础上，本部分对系统几个核心模块进行详细设计。
+<br><br>
+<span style="margin-left:25px"></span>在本系统中，我们认为用户指纹录入和用户指纹匹配两个模块最为重要和关键。（1）用户指纹录入模块详细设计
+<br><br>
+<span style="margin-left:25px"></span>用户指纹录入模块包含两个子模块：
+<br><br>
+<span style="margin-left:25px"></span>用户信息上传子模块和用户指纹上传子模块，其中用户信息上传子模块是对用户自身的信息进行录入，是用户上传指纹图片的基础和前提；在用户信息上传以后，用户才可以进行指纹信息的录入，用户指纹上传子模块是用户分指纹分样本上传指纹信息，用户指纹上传是进一步进行指纹匹配的前提。先分别从时序图角度对两个子模块进行描述。用户信息上传子模块时序图如图4.4所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.4 用户信息上传时序图
+<br><br>
+<span style="margin-left:25px"></span>从该时序图可以看出，用户信息上传共涉及4个实体，首先 User在 UserView视图中填写用户信息，
+<br><br>
+<span style="margin-left:25px"></span> UserView收到用户信息之后请求 UserController类的 insertUser方法，该方法进一步请求 User类的 insertToUser方法将用户信息实际写入数据库中， insertToUser方法执行以后，返回用户插入是否成功给 UserController类，控制器根据是否成功组织 JSON数据，并把 JSON数据返回给 View，视图最终将 JSON数据返回给用户（客户端）。用户指纹上传子模块时序图如图4.5所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.5 用户指纹上传时序图
+<br><br>
+<span style="margin-left:25px"></span>从该时序图可以看出，用户指纹上传共涉及4个实体，首先 User在 FingerprintView视图中填写指纹数据，
+<br><br>
+<span style="margin-left:25px"></span>视图收到用户指纹数据之后请求 FingerprintController类中的 UploadFingerprint方法，该方法进一步请求 Fingerprint类中的 insertToFingerprint方法将用户指纹数据写入数据库中， insertToFingerprint方法执行以后，返回指纹插入是否成功给 FingerprintController类，控制器根据是否成功组织 JSON数据，并把 JSON数据返回给 View，视图最终将 JSON数据返回给用户（客户端）。（2）用户指纹匹配模块详细设计
+<br><br>
+<span style="margin-left:25px"></span>用户指纹匹配模块是系统最核心和最关键的功能模块，整个匹配过程又可以细分为3个阶段：
+<br><br>
+<span style="margin-left:25px"></span>第一阶段，获取二维码阶段。
+<br><br>
+<span style="margin-left:25px"></span>首先 User向 FingerprintView视图中发送获取二维码请求，视图收到用户请求后调用 FingerprintController类中的 generateQRCode方法生成二维码，该方法执行完成以后向视图层返回二维码图像信息，视图层显示二维码图像给用户。第二阶段，用户验证阶段。
+<br><br>
+<span style="margin-left:25px"></span>客户端将二维码和用户指纹图片进行数字水印加密之后向 FingerprintView视图提交匹配请求，视图层收到匹配请求以后调用 FingerprintController中的 verificationUser方法验证用户的真实性，并返回用户验证结果给 View类。第三阶段，指纹匹配阶段。
+<br><br>
+<span style="margin-left:25px"></span>在验证用户真实性以后，视图请求 FingerprintController类的 matchFingerprint方法，该方法进一步请求 Fingerprint实体类的 getImages方法获取该用户所有指纹图像，然后将用户指纹与数据库中所有该用户指纹进行对比和匹配，得到指纹对比结果，并将 JSON结果返回给 View，最后视图把指纹匹配 JSON结果返回给用户（客户端），完成了整个指纹匹配过程。用户指纹匹配模块的时序图如图4.6所示，该时序图形象反映了以上3个阶段。
+<br><br>
+<span style="margin-left:25px"></span>图4.6 用户指纹匹配时序图
+<br><br>
+<span style="margin-left:25px"></span>5.18 数据库设计
+<br><br>
+<span style="margin-left:25px"></span>本部分依据系统整体设计方案进行数据库设计。
+<br><br>
+<span style="margin-left:25px"></span>由于本系统设计的数据库表比较少，因此进行了比较简要的设计。5.19.23 E-R图
+<br><br>
+<span style="margin-left:25px"></span>首先设计数据库系统实体关系图，在指纹识别系统数据库中主要包含了2个实体：
+<br><br>
+<span style="margin-left:25px"></span>用户实体User和指纹实体Fingerprint，由于每个用户可以有多个指纹数据，因此用户实体和指纹实体之间形成了一对多的关系。在用户实体中，包含UserId，UserName和PassWord三个属性，其中以UserId为主键；
+<br><br>
+<span style="margin-left:25px"></span>在指纹实体中，包含FpId，FpName，sampleNumber，FpPath和UserId五个属性，其中以FpId为主键，UserId为外键。通过UserId建立一对多关联。数据库系统E-R图设计如图4.7所示。
+<br><br>
+<span style="margin-left:25px"></span>图4.7 数据库系统E-R图
+<br><br>
+<span style="margin-left:25px"></span>5.19.24 数据库详细设计
+<br><br>
+<span style="margin-left:25px"></span>根据上述E-R图进行数据库详细设计，包括用户表设计和指纹信息表设计。
+<br><br>
+<span style="margin-left:25px"></span>（1）t_user表的设计
+<br><br>
+<span style="margin-left:25px"></span>t_user表是用户信息表，存储着用户的个人信息，主要字段的详细描述如表4.1所示。
+<br><br>
+<span style="margin-left:25px"></span>表4.1 用户信息表
+<br><br>
+<span style="margin-left:25px"></span>字段名称字段类型主外键字段描述
+<br><br>
+<span style="margin-left:25px"></span>userIdvarchar(20)主键用户Id
+<br><br>
+<span style="margin-left:25px"></span>userNamevarchar(20)否用户名
+<br><br>
+<span style="margin-left:25px"></span>userPasswordvarchar(20)否用户密码
+<br><br>
+<span style="margin-left:25px"></span>（2）t_fingerprint表的设计
+<br><br>
+<span style="margin-left:25px"></span>t_fingerprint是用户指纹信息表，存储着注册用户的指纹信息，主要字段的详细描述如表4.2所示。
+<br><br>
+<span style="margin-left:25px"></span>表4.2 用户指纹信息表
+<br><br>
+<span style="margin-left:25px"></span>字段名称字段类型主外键字段描述
+<br><br>
+<span style="margin-left:25px"></span>fpIdvarchar(45)主键指纹Id
+<br><br>
+<span style="margin-left:25px"></span>fpNamevarchar(20)指纹名称
+<br><br>
+<span style="margin-left:25px"></span>sampleNumberint(11)样本编号
+<br><br>
+<span style="margin-left:25px"></span>userIdvarchar(20)用户Id
+<br><br>
+<span style="margin-left:25px"></span>fpPathvarchar(80)指纹路径
+<br><br>
+<span style="margin-left:25px"></span>5.19 本章小结
+<br><br>
+<span style="margin-left:25px"></span>本章在面向对象系统分析基础上采用面向对象的系统设计方法进行了系统设计。
+<br><br>
+<span style="margin-left:25px"></span>首先，从系统逻辑组件出发划分了系统组件并进行了工作流分析；其次结合REST Web Service技术对系统进行了架构设计，包括系统整体架构设计、类设计和分模块详细设计；最后，在系统架构设计的基础上进行了数据库设计，包括E－R图设计和数据库详细设计。5 指纹认证系统实现
+<br><br>
+<span style="margin-left:25px"></span>本章讨论基于数字水印的指纹认证系统实现，共包括五个部分的内容。
+<br><br>
+<span style="margin-left:25px"></span>第一部分，讨论系统实现的总体结构，借助Nancy Framework给出概要的实现框架；第二部分，讨论系统模型层的实现；第三部分，讨论系统视图层的实现；第四部分，讨论系统控制器层的实现；第五部分，讨论系统中关键算法——可逆数字水印算法的实现。6.20 系统实现环境和思路
+<br><br>
+<span style="margin-left:25px"></span>系统服务器端采用了Nancy Framework提供REST风格的Web Service，因此系统实现过程遵循Nancy Framework中的MVC模式。
+<br><br>
+<span style="margin-left:25px"></span>系统实现步骤如下：（1）采用Visual Studio 2013社区版作为开发工具，首先安装在Visual Studio中安装Nancy Framework框架工具，建立相应的Nancy项目。
+<br><br>
+<span style="margin-left:25px"></span>（2）添加系统依赖的第三方类库和工具，如SourceAFIS、Zxing.net、MySQL驱动程序等。
+<br><br>
+<span style="margin-left:25px"></span>（3）系统模型层开发，依据系统设计的数据模型开发系统模型层。
+<br><br>
+<span style="margin-left:25px"></span>（4）系统视图层开发，开发系统与用户交互的UI视图。
+<br><br>
+<span style="margin-left:25px"></span>（5）系统控制器层开发，开发系统的核心业务逻辑，包括指纹上传、指纹匹配、指纹加密、二维码生成等。
+<br><br>
+<span style="margin-left:25px"></span>系统实现的整体内容如图5.1所示。
+<br><br>
+<span style="margin-left:25px"></span>从图5.1可以看出，系统内部主要包括模型层、视图层和控制器层3部分，引用了 Zxing、 MySQL、 Nancy、 SourceAFIS4个外部库，底层数据库管理系统采用 MySQL.系统整体设计中的关键问题在于如何区分模型、视图和控制器层，对于模型层应当设计哪些模型类与数据库对应；
+<br><br>
+<span style="margin-left:25px"></span>对于视图层，采用何种模板引擎并如何与后端进行绑定；对于控制器层，应当如何设计路由和访问方法。在本章后续部分，我们将分别从模型层、视图层、控制器层讨论系统如何实现。图5.1 基于MVC的系统实现路径图
+<br><br>
+<span style="margin-left:25px"></span>6.21 模型层实现
+<br><br>
+<span style="margin-left:25px"></span>在模型层主要设计了4个模型类。
+<br><br>
+<span style="margin-left:25px"></span>其中User类和Fingerprint类是数据库中User表和Fingerprint表的实体类；MatchResult类封装了匹配结果对象，SqlHelper类包含了对数据实体类的操作方法封装。由于User类、Fingerprint类和MatchResult类只是对数据实体的封装，因此简要概述如下。在User类中，定义了userId、userName、passWord 3个属性与数据库t_user表相对应。
+<br><br>
+<span style="margin-left:25px"></span>在Fingerprint类中，定义了fpID、fpName、sampleNumber、userId、fpPath 5个属性与数据库t_fingerprint表相对应。
+<br><br>
+<span style="margin-left:25px"></span>在MatchResult类中定义了fingerprint属性和score属性，分别用来表示指纹的匹配分数。
+<br><br>
+<span style="margin-left:25px"></span>在匹配操作中，会实例化该类并进行赋值。在模型层中，SqlHelper类封装了四个操作数据的方法，是模型层实现的核心和关键，现进行详细讨论。
+<br><br>
+<span style="margin-left:25px"></span>SqlHelper类共实现了4个方法：添加用户信息、添加指纹图片信息、判断用户是否存在以及获取指纹图像信息，分别实现如下。6.22.25 添加用户方法
+<br><br>
+<span style="margin-left:25px"></span>该方法用于实现添加用户，首先连接数据库，然后将传入的参数写入相应的SQL语句当中，利用SQL语句将用户插入数据库。
+<br><br>
+<span style="margin-left:25px"></span>添加用户方法的实现代码如下：public static int insertToUser(User user)
+<br><br>
+<span style="margin-left:25px"></span>int rows;
+<br><br>
+<span style="margin-left:25px"></span>using (MySqlConnection myconnection = new MySqlConnection(myconn))
+<br><br>
+<span style="margin-left:25px"></span>string commandText = ”insert into user values (@userId，@userName)”;
+<br><br>
+<span style="margin-left:25px"></span> MySqlCommand command= new MySqlCommand(commandText，myconnection);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@userId”， user.userId);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@userName”， user.userName);
+<br><br>
+<span style="margin-left:25px"></span>myconnection.Open();
+<br><br>
+<span style="margin-left:25px"></span>rows = command.ExecuteNonQuery();
+<br><br>
+<span style="margin-left:25px"></span>return rows;
+<br><br>
+<span style="margin-left:25px"></span>6.22.26 判断用户是否存在方法
+<br><br>
+<span style="margin-left:25px"></span>该方法用于判断用户是否存在。
+<br><br>
+<span style="margin-left:25px"></span>首先连接数据库，然后将用户名作为SQL语句中的参数进行查询，根据数据库查询结果来判断用户是否存在，并返回bool值。判断用户是否存在方法的实现代码如下：public static bool isExistUser(User user)
+<br><br>
+<span style="margin-left:25px"></span>int num;
+<br><br>
+<span style="margin-left:25px"></span>using(MySqlConnection myconnection = new MySqlConnection(myconn))
+<br><br>
+<span style="margin-left:25px"></span>string commandText = ”select count(*) from user
+<br><br>
+<span style="margin-left:25px"></span>where userId= @userId”;
+<br><br>
+<span style="margin-left:25px"></span>MySqlCommand command
+<br><br>
+<span style="margin-left:25px"></span>= new MySqlCommand(commandText， myconnection);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@userId”， user.userId);
+<br><br>
+<span style="margin-left:25px"></span>myconnection.Open();
+<br><br>
+<span style="margin-left:25px"></span>num = Convert.ToInt32(command.ExecuteScalar());
+<br><br>
+<span style="margin-left:25px"></span>if (num !
+<br><br>
+<span style="margin-left:25px"></span>= 0) return true;else return false;
+<br><br>
+<span style="margin-left:25px"></span>6.22.27 添加用户指纹方法
+<br><br>
+<span style="margin-left:25px"></span>该方法用于添加用户指纹信息。
+<br><br>
+<span style="margin-left:25px"></span>首先连接数据库，然后将用户指纹信息作为SQL参数执行SQL语句，通过执行SQL语句将指纹信息插入数据库。添加用户指纹方法的实现代码如下：public static int insertToFingerprint(Fingerprint fp)
+<br><br>
+<span style="margin-left:25px"></span>int rows;
+<br><br>
+<span style="margin-left:25px"></span>using (MySqlConnection myconnection = new MySqlConnection(myconn))
+<br><br>
+<span style="margin-left:25px"></span>string commandText = ”insert into fingerprint
+<br><br>
+<span style="margin-left:25px"></span>values (@fpID，@fpName，@sampleNumber，@userID，@fpPath)”;
+<br><br>
+<span style="margin-left:25px"></span>MySqlCommand command =
+<br><br>
+<span style="margin-left:25px"></span>new MySqlCommand(commandText， myconnection);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@fpID”， fp.fpID);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@fpName”， fp.fpName);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@sampleNumber”，
+<br><br>
+<span style="margin-left:25px"></span>fp.sampleNumber);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@userID”， fp.userID);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@fpPath”， fp.fpPath);
+<br><br>
+<span style="margin-left:25px"></span>myconnection.Open();
+<br><br>
+<span style="margin-left:25px"></span>rows = command.ExecuteNonQuery();
+<br><br>
+<span style="margin-left:25px"></span>return rows;
+<br><br>
+<span style="margin-left:25px"></span>6.22.28 获取指纹图片方法
+<br><br>
+<span style="margin-left:25px"></span>该方法根据userId查询数据库，获取当前用户的所有指纹数据。
+<br><br>
+<span style="margin-left:25px"></span>然后通过循环读取SQL结果，将所有的指纹数据信息存储到List容器当中。获取指纹图片方法的实现代码如下：public static List[Model.Fingerprint] getImages(string userId)
+<br><br>
+<span style="margin-left:25px"></span>List[Model.Fingerprint] images = new List[Model.Fingerprint]();
+<br><br>
+<span style="margin-left:25px"></span>using (MySqlConnection myconnection = new MySqlConnection(myconn))
+<br><br>
+<span style="margin-left:25px"></span>string commandText = ”select * from fingerprint
+<br><br>
+<span style="margin-left:25px"></span>where userId=@userId”;
+<br><br>
+<span style="margin-left:25px"></span>MySqlCommand command = new MySqlCommand(commandText， myconnection);
+<br><br>
+<span style="margin-left:25px"></span>command.Parameters.AddWithValue(”@userId”， userId);
+<br><br>
+<span style="margin-left:25px"></span>myconnection.Open();
+<br><br>
+<span style="margin-left:25px"></span>using (MySqlDataReader reader = command.ExecuteReader())
+<br><br>
+<span style="margin-left:25px"></span>while (reader.Read())
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>fp.fpID = reader.GetString(0);
+<br><br>
+<span style="margin-left:25px"></span>fp.fpName = reader.GetString(1);
+<br><br>
+<span style="margin-left:25px"></span>fp.sampleNumber = reader.GetInt32(2);
+<br><br>
+<span style="margin-left:25px"></span>fp.userID = reader.GetString(3);
+<br><br>
+<span style="margin-left:25px"></span>fp.fpPath = reader.GetString(4);
+<br><br>
+<span style="margin-left:25px"></span>images.Add(fp);
+<br><br>
+<span style="margin-left:25px"></span>return images;
+<br><br>
+<span style="margin-left:25px"></span>6.22 视图层实现
+<br><br>
+<span style="margin-left:25px"></span>视图层主要用来负责与用户进行交互，由于指纹认证系统服务器端主要用于提供Web Service，因此视图层非常简单。
+<br><br>
+<span style="margin-left:25px"></span>大体上有3个主要视图页面。6.23.29 索引页面的实现
+<br><br>
+<span style="margin-left:25px"></span>索引页面主要负责指纹认证系统功能导航，通过索引页面用户可以获取指纹认证系统所有功能，包括指纹上传、获取二维码、指纹匹配等页面。
+<br><br>
+<span style="margin-left:25px"></span>索引页面的实现代码如下：[body]
+<br><br>
+<span style="margin-left:25px"></span>[h1]Fingerprint Certification System[/h1]
+<br><br>
+<span style="margin-left:25px"></span>[img src=”~/Content/logo.jpg” alt=”FP logo” /][br /]
+<br><br>
+<span style="margin-left:25px"></span>[p]
+<br><br>
+<span style="margin-left:25px"></span>[ul]
+<br><br>
+<span style="margin-left:25px"></span>[li][b]
+<br><br>
+<span style="margin-left:25px"></span>[a href=”upload”]Upload Fingerprint[/a]
+<br><br>
+<span style="margin-left:25px"></span>[/b][/li]
+<br><br>
+<span style="margin-left:25px"></span>[li][b]
+<br><br>
+<span style="margin-left:25px"></span>[a href=”certificate”]Fingerprint Certification[/a]
+<br><br>
+<span style="margin-left:25px"></span>[/b][/li]
+<br><br>
+<span style="margin-left:25px"></span>[li][b]
+<br><br>
+<span style="margin-left:25px"></span>[a href=”barcode”]Generate QR-Code[/a]
+<br><br>
+<span style="margin-left:25px"></span>[/b][/li]
+<br><br>
+<span style="margin-left:25px"></span>[li][b]
+<br><br>
+<span style="margin-left:25px"></span>[a href=”securityUpload”]Upload barcode Fingerprint[/a]
+<br><br>
+<span style="margin-left:25px"></span>[/b][/li]
+<br><br>
+<span style="margin-left:25px"></span>[li][b]
+<br><br>
+<span style="margin-left:25px"></span>[a href=”result”]Get the result[/a]
+<br><br>
+<span style="margin-left:25px"></span>[/b][/li]
+<br><br>
+<span style="margin-left:25px"></span>[/ul]
+<br><br>
+<span style="margin-left:25px"></span>[/p]
+<br><br>
+<span style="margin-left:25px"></span>[/body]
+<br><br>
+<span style="margin-left:25px"></span>Index页面效果如图5.2所示。
+<br><br>
+<span style="margin-left:25px"></span>图5.2 Index页面展示
+<br><br>
+<span style="margin-left:25px"></span>6.23.30 指纹上传页面的实现
+<br><br>
+<span style="margin-left:25px"></span>指纹上传页面主要用于上传用户名及其指纹图片信息，包括用户指纹图片、指纹名称、指纹样本编号等基本信息，
+<br><br>
+<span style="margin-left:25px"></span>该页面提交以后通过 POST方法找到相应的控制器处理。指纹上传页面的实现代码如下：[form method=”POST” enctype=”multipart/form-data” action=”/upload”]
+<br><br>
+<span style="margin-left:25px"></span>[ul]Student ID:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”id”][/ul][ul]Student Name:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”name”][/ul][ul]
+<br><br>
+<span style="margin-left:25px"></span>Choose File 1:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”file” name=”file1”]
+<br><br>
+<span style="margin-left:25px"></span>FingerName:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”fpname1”]
+<br><br>
+<span style="margin-left:25px"></span>SampleNumber:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”samplenumber1”]
+<br><br>
+<span style="margin-left:25px"></span>[/ul]
+<br><br>
+<span style="margin-left:25px"></span>[ul]
+<br><br>
+<span style="margin-left:25px"></span>Choose File 2:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”file” name=”file2”]
+<br><br>
+<span style="margin-left:25px"></span>FingerName:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”fpname2”]
+<br><br>
+<span style="margin-left:25px"></span>SampleNumber:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”samplenumber2”]
+<br><br>
+<span style="margin-left:25px"></span>[/ul]
+<br><br>
+<span style="margin-left:25px"></span>[/form]
+<br><br>
+<span style="margin-left:25px"></span>页面展示效果如图5.3所示。
+<br><br>
+<span style="margin-left:25px"></span>图5.3 指纹上传页面展示
+<br><br>
+<span style="margin-left:25px"></span>6.23.31 指纹认证页面的实现
+<br><br>
+<span style="margin-left:25px"></span>在指纹认证页面中，用户提交用户ID和指纹图片，然后系统进行指纹匹配，返回匹配结果给用户。
+<br><br>
+<span style="margin-left:25px"></span>指纹认证页面的实现代码如下：[form method=”post” action=”/verification” enctype=”multipart/form-data”]
+<br><br>
+<span style="margin-left:25px"></span>[ul]
+<br><br>
+<span style="margin-left:25px"></span>[li]UserId:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”text” name=”userId” /][/li][br /]
+<br><br>
+<span style="margin-left:25px"></span>[li]FP Image:
+<br><br>
+<span style="margin-left:25px"></span>[input type=”file” name=”finger” /][/li][br /]
+<br><br>
+<span style="margin-left:25px"></span>[li][input type=”submit” value=”submit”/][/li]
+<br><br>
+<span style="margin-left:25px"></span>[/ul]
+<br><br>
+<span style="margin-left:25px"></span>[/form]
+<br><br>
+<span style="margin-left:25px"></span>指纹认证页面效果如图5.4所示。
+<br><br>
+<span style="margin-left:25px"></span>图5.4 指纹认证页面效果
+<br><br>
+<span style="margin-left:25px"></span>6.23 控制器层实现
+<br><br>
+<span style="margin-left:25px"></span>控制器层是REST风格Web Service的核心。
+<br><br>
+<span style="margin-left:25px"></span>包含了系统核心业务逻辑，主要实现了指纹图像上传、指纹匹配、二维码生成、用户认证等一系列功能。6.24.32 指纹上传的实现
+<br><br>
+<span style="margin-left:25px"></span>指纹上传分为两个过程。
+<br><br>
+<span style="margin-left:25px"></span>首先控制器从视图层获取用户指纹的图片、指纹样本编号、指纹名称等信息，并在控制器生成指纹路径等信息，最终将这些指纹信息存储在指纹类中。这一过程的实现代码如下：Post[”/upload”] = parameters =]
+<br><br>
+<span style="margin-left:25px"></span>User user = new User();
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp1 = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp2 = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp3 = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp4 = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>Model.Fingerprint fp5 = new Model.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>user.userId = (string)this.Request.Form.id;
+<br><br>
+<span style="margin-left:25px"></span>user.userName = (string)this.Request.Form.name;
+<br><br>
+<span style="margin-left:25px"></span>fp1.fpName = (string)this.Request.Form.fpname1;
+<br><br>
+<span style="margin-left:25px"></span>fp2.fpName = (string)this.Request.Form.fpname2;
+<br><br>
+<span style="margin-left:25px"></span>fp3.fpName = (string)this.Request.Form.fpname3;
+<br><br>
+<span style="margin-left:25px"></span>fp4.fpName = (string)this.Request.Form.fpname4;
+<br><br>
+<span style="margin-left:25px"></span>fp5.fpName = (string)this.Request.Form.fpname5;
+<br><br>
+<span style="margin-left:25px"></span>控制器获取指纹数据之后，将这些数据组合成对应指纹类，然后通过 Model层将指纹信息写入数据库，
+<br><br>
+<span style="margin-left:25px"></span>将指纹图片保存在服务器制定文件位置。并将上传结果以JSON形式返回给客户端。这一过程的实现代码如下：if (!
+<br><br>
+<span style="margin-left:25px"></span>SqlHelper.isExistUser(user)) SqlHelper.insertToUser(user);int i1 = SqlHelper.insertToFingerprint(fp1);
+<br><br>
+<span style="margin-left:25px"></span>int i2 = SqlHelper.insertToFingerprint(fp2);
+<br><br>
+<span style="margin-left:25px"></span>int i3 = SqlHelper.insertToFingerprint(fp3);
+<br><br>
+<span style="margin-left:25px"></span>int i4 = SqlHelper.insertToFingerprint(fp4);
+<br><br>
+<span style="margin-left:25px"></span>int i5 = SqlHelper.insertToFingerprint(fp5);
+<br><br>
+<span style="margin-left:25px"></span>if (i1!
+<br><br>
+<span style="margin-left:25px"></span>=0    i2!=0    i3!=0    i4!=0    i5!=0)return Response.AsJson(new { Result = ”Insert Sucess” });
+<br><br>
+<span style="margin-left:25px"></span>else
+<br><br>
+<span style="margin-left:25px"></span>return Response.AsJson(new { Result = ”Insert Failed” });
+<br><br>
+<span style="margin-left:25px"></span>6.24.33 指纹匹配的实现
+<br><br>
+<span style="margin-left:25px"></span>指纹匹配是服务器端的核心模块之一。
+<br><br>
+<span style="margin-left:25px"></span>指纹匹配的过程比较复杂，如果我们需要比较指纹图片 P1和指纹图片 P2的匹配度，首先需要分别提取图像 P1和 P2的特征点，然后匹配引擎会调用匹配方法比较 P1和 P2的特征点，如果二者特征点有相似之处，则可能产生匹配分数，否则匹配分数为0.那么如何理解指纹图片的特征点呢？
+<br><br>
+<span style="margin-left:25px"></span>图5.5说明了指纹图像中的两类特征点[42]。在图中，圆形标示部分为指纹中的一类特征点——终止点；而方形标示部分为指纹中的另一类特征点——分叉点。在指纹匹配算法中，大多是根据这两类特征点的位置和相似度来进行指纹匹配的。图5.5 指纹特征点
+<br><br>
+<span style="margin-left:25px"></span>在本系统中，通过调用SourceAFIS开源库进行指纹匹配，使用SourceAFIS进行指纹匹配的基本模式如下：
+<br><br>
+<span style="margin-left:25px"></span>static AfisEngine Afis = new AfisEngine();
+<br><br>
+<span style="margin-left:25px"></span>Fingerprint fp1 = new Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>Person person1 = new Person();
+<br><br>
+<span style="margin-left:25px"></span>person1.Fingerprints.Add(fp1);
+<br><br>
+<span style="margin-left:25px"></span>// person2 do the same operation as person1
+<br><br>
+<span style="margin-left:25px"></span>Afis.Extract(person1);
+<br><br>
+<span style="margin-left:25px"></span>Afis.Extract(person2);
+<br><br>
+<span style="margin-left:25px"></span>score = Afis.Verify(person1， person2);
+<br><br>
+<span style="margin-left:25px"></span>使用SourceAFIS的基本步骤为：
+<br><br>
+<span style="margin-left:25px"></span>（1）实体化AFIS匹配引擎；
+<br><br>
+<span style="margin-left:25px"></span>（2）通过指纹图片实例化两个指纹对象；
+<br><br>
+<span style="margin-left:25px"></span>（3）将两个指纹对象存入Person容器中；
+<br><br>
+<span style="margin-left:25px"></span>（4）采用匹配引擎中的Extract方法对指纹进行特征提取；
+<br><br>
+<span style="margin-left:25px"></span>（5）采用匹配引擎中的Verify方法对指纹进行匹配并获取匹配分数；
+<br><br>
+<span style="margin-left:25px"></span>（6）客户端根据匹配分数来判断指纹认证是否通过，一般而言，如果两个指纹互相匹配，那么匹配分数应该大于0，否则匹配分数一般为0。
+<br><br>
+<span style="margin-left:25px"></span>在我们的指纹认证系统中，实现匹配算法基本上采用同样的原理实现，对于每一个需要比较的用户指纹，
+<br><br>
+<span style="margin-left:25px"></span>我们首先从数据库中查询当前用户的所有指纹信息，然后将用户当前指纹与数据库中指纹信息进行逐一对比与匹配，并得到该指纹与数据库中所有指纹的匹配分数，最终以 JSON形式返回给客户端。这一过程的实现代码如下：SourceAFIS.Simple.Fingerprint fp1 = new SourceAFIS.Simple.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>fp1.AsBitmap = new Bitmap(Bitmap.FromFile(uploadPath));
+<br><br>
+<span style="margin-left:25px"></span>Person person1 = new Person();
+<br><br>
+<span style="margin-left:25px"></span>person1.Fingerprints.Add(fp1);
+<br><br>
+<span style="margin-left:25px"></span>Afis.Extract(person1);
+<br><br>
+<span style="margin-left:25px"></span>List[MatchResult] results = new List[MatchResult]();
+<br><br>
+<span style="margin-left:25px"></span>foreach (var fp in fingerprints)
+<br><br>
+<span style="margin-left:25px"></span>SourceAFIS.Simple.Fingerprint fp2 =
+<br><br>
+<span style="margin-left:25px"></span>new SourceAFIS.Simple.Fingerprint();
+<br><br>
+<span style="margin-left:25px"></span>fp2.AsBitmap = new Bitmap(Bitmap.FromFile(fp.fpPath));
+<br><br>
+<span style="margin-left:25px"></span>Person person2 = new Person();
+<br><br>
+<span style="margin-left:25px"></span>person2.Fingerprints.Add(fp2);
+<br><br>
+<span style="margin-left:25px"></span>Afis.Extract(person2);
+<br><br>
+<span style="margin-left:25px"></span>MatchResult result = new MatchResult();
+<br><br>
+<span style="margin-left:25px"></span>result.fingerprint = fp.fpName + fp.sampleNumber.ToString();
+<br><br>
+<span style="margin-left:25px"></span>result.score = Afis.Verify(person1， person2);
+<br><br>
+<span style="margin-left:25px"></span>results.Add(result);
+<br><br>
+<span style="margin-left:25px"></span>return Response.AsJson[List[MatchResult]](results);
+<br><br>
+<span style="margin-left:25px"></span>图5.6展示了指纹匹配之后服务器返回的JSON结果数据。
+<br><br>
+<span style="margin-left:25px"></span>图5.6 指纹匹配结果数据
+<br><br>
+<span style="margin-left:25px"></span>6.24.34 生成二维码的实现
+<br><br>
+<span style="margin-left:25px"></span>二维码生成采用Zxing.net开源库实现。
+<br><br>
+<span style="margin-left:25px"></span>通过 Zxing，程序员只需要选定二维码的编码标准、宽度和长度以及其他参数信息就可以生成相应的二维码图片，在本系统中使用 DateTime. Now. ToString()方法生成时间戳消息，然后把它作为参数嵌入到二维码当中。二维码生成的实现代码如下：Get[”/barcode”] = parameters =]
+<br><br>
+<span style="margin-left:25px"></span>BarcodeWriter writer = new BarcodeWriter();
+<br><br>
+<span style="margin-left:25px"></span>writer.Format = BarcodeFormat.QR_CODE;
+<br><br>
+<span style="margin-left:25px"></span>writer.Options = new QrCodeEncodingOptions
+<br><br>
+<span style="margin-left:25px"></span>DisableECI = true，
+<br><br>
+<span style="margin-left:25px"></span>CharacterSet = ”UTF-8”，
+<br><br>
+<span style="margin-left:25px"></span>Width = 1840，
+<br><br>
+<span style="margin-left:25px"></span>Height = 1840，
+<br><br>
+<span style="margin-left:25px"></span>ErrorCorrection = ErrorCorrectionLevel.H
+<br><br>
+<span style="margin-left:25px"></span>};
+<br><br>
+<span style="margin-left:25px"></span>requestTime = DateTime.Now.ToString();
+<br><br>
+<span style="margin-left:25px"></span>Bitmap qrImage = writer.Write(requestTime);
+<br><br>
+<span style="margin-left:25px"></span>string path = Path.Combine(”data”， ”qrdata”);
+<br><br>
+<span style="margin-left:25px"></span>if (!
+<br><br>
+<span style="margin-left:25px"></span>Directory.Exists(path)) Directory.CreateDirectory(path);string imagePath = path + @”\” + ”qrImage.bmp”;
+<br><br>
+<span style="margin-left:25px"></span>qrImage.Save(imagePath);
+<br><br>
+<span style="margin-left:25px"></span>return Response.AsImage(imagePath);
+<br><br>
+<span style="margin-left:25px"></span>};
+<br><br>
+<span style="margin-left:25px"></span>生成的二维码图片如图5.7所示。
+<br><br>
+<span style="margin-left:25px"></span>图5.7 二维码图片效果
+<br><br>
+<span style="margin-left:25px"></span>6.24.35 用户认证的实现
+<br><br>
+<span style="margin-left:25px"></span>用户认证本质上是二维码的解码过程，首先仍然采用 Zxing库对接收的二维码图片进行解码，解码之后可以得到一个字符串数据，
+<br><br>
+<span style="margin-left:25px"></span>通过比较该字符串数据与之前的时间戳信息是否相等来进行用户认证，确保用户的真实性。用户认证的实现代码如下：string rawFPImage = Path.Combine(”data”， ”qrdata”) + @”\” + ”fingerprint.bmp”;
+<br><br>
+<span style="margin-left:25px"></span>bmpCrop.Save(rawFPImage);
+<br><br>
+<span style="margin-left:25px"></span>LuminanceSource source = new BitmapLuminanceSource(QRcodeImage);
+<br><br>
+<span style="margin-left:25px"></span>BinaryBitmap newbitmap = new BinaryBitmap(new HybridBinarizer(source));
+<br><br>
+<span style="margin-left:25px"></span>Result result = new MultiFormatReader().decodeWithState(newbitmap);
+<br><br>
+<span style="margin-left:25px"></span>if (result.Text !
+<br><br>
+<span style="margin-left:25px"></span>= requestTime)return Response.AsJson(new { Result = ”Authentication failure” });
+<br><br>
+<span style="margin-left:25px"></span>6.24 本章小结
+<br><br>
+<span style="margin-left:25px"></span>本章在面向对象设计的基础上遵循 MVC架构进行了系统实现，首先介绍了系统实现环境和思路，
+<br><br>
+<span style="margin-left:25px"></span>然后分别从模型层、视图层、控制器层对之前的设计进行了实现，分别实现了指纹上传、指纹认证、指纹匹配、二维码生成等功能。在系统实现之后对系统中采用的关键算法进行了详细讨论和介绍。6 系统测试与仿真实验
+<br><br>
+<span style="margin-left:25px"></span>系统开发完成以后，应该对系统进行系统测试和优化。
+<br><br>
+<span style="margin-left:25px"></span>但是由于本系统是一个实验性的指纹认证系统，对系统进行仿真实验或许更为有效。本章主要讨论基于Matlab的仿真实验，在实验之后对系统成本、可用性和安全性进行分析和验证。正如第五章所描述的那样，本部分主要使用 Matlab工具[43]对图像加密和解密过程进行模拟，
+<br><br>
+<span style="margin-left:25px"></span>通过模拟可以控制指纹图片加密时的最低有效位，分别取得最低有效位为0位、2位、6位时的指纹图片，最后分析了不同最低有效位的指纹图片匹配结果。7.25 加密过程
+<br><br>
+<span style="margin-left:25px"></span>对指纹图像加密过程的Matlab仿真程序如下所示。
+<br><br>
+<span style="margin-left:25px"></span>该仿真程序的实现与论文5.5部分讨论的加密算法基本一致，对原始指纹图片和二维码图片应用该加密算法以后，指纹图片被加入到二维码图片的最低有效位中[44]。for i=1:
+<br><br>
+<span style="margin-left:25px"></span>for j=1:
+<br><br>
+<span style="margin-left:25px"></span>orimod(i，j)=mod(qrImage(i，j，1)，4);
+<br><br>
+<span style="margin-left:25px"></span>orimod(i+m，j) = mod(qrImage(i+m，j，1)，4);
+<br><br>
+<span style="margin-left:25px"></span>orimod(i，j+n) = mod(qrImage(i，j+n，1)，4);
+<br><br>
+<span style="margin-left:25px"></span>orimod(i+m，j+n) = mod(qrImage(i+m，j+n，1)，4);
+<br><br>
+<span style="margin-left:25px"></span>qrImage1(i，j，1) = qrImage(i，j，1)-orimod(i，j);
+<br><br>
+<span style="margin-left:25px"></span>qrImage1(i+m，j，1) = qrImage(i+m，j，1)-orimod(i+m，j);
+<br><br>
+<span style="margin-left:25px"></span>qrImage1(i，j+n，1) = qrImage(i，j+n，1)-orimod(i，j+n);
+<br><br>
+<span style="margin-left:25px"></span>qrImage1(i+m，j+n，1) = qrImage(i+m，j+n，1)-orimod(i+m，j+n);
+<br><br>
+<span style="margin-left:25px"></span>multiwatermarkImage(i，j) = m1(i，j);
+<br><br>
+<span style="margin-left:25px"></span>multiwatermarkImage(i+m，j) = m2(i，j);
+<br><br>
+<span style="margin-left:25px"></span>multiwatermarkImage(i，j+n) = m3(i，j);
+<br><br>
+<span style="margin-left:25px"></span>multiwatermarkImage(i+m，j+n) = m4(i，j);
+<br><br>
+<span style="margin-left:25px"></span>qrImage2(i，j，1) = qrImage1(i，j，1) + multiwatermarkImage(i，j);
+<br><br>
+<span style="margin-left:25px"></span>qrImage2(i+m，j，1) = qrImage1(i+m，j，1) + multiwatermarkImage(i+m，j);
+<br><br>
+<span style="margin-left:25px"></span>qrImage2(i，j+n，1) = qrImage1(i，j+n，1) + multiwatermarkImage(i，j+n);
+<br><br>
+<span style="margin-left:25px"></span>qrImage2(i+m，j+n，1) = qrImage1(i+m，j+n，1)
+<br><br>
+<span style="margin-left:25px"></span>+ multiwatermarkImage(i+m，j+n);
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>在加密算法中，可以对指纹图片的最低位进行设置。
+<br><br>
+<span style="margin-left:25px"></span>设置算法如下所示：if bits == 0
+<br><br>
+<span style="margin-left:25px"></span>k1 = fix(watermarkImage(i，j));
+<br><br>
+<span style="margin-left:25px"></span>k2 = fix(k1/4);
+<br><br>
+<span style="margin-left:25px"></span>k3 = fix(k2/4);
+<br><br>
+<span style="margin-left:25px"></span>k4 = fix(k3/4);
+<br><br>
+<span style="margin-left:25px"></span>x1 = mod(k1，4);
+<br><br>
+<span style="margin-left:25px"></span>x2 = mod(k2，4);
+<br><br>
+<span style="margin-left:25px"></span>x3 = mod(k3，4);
+<br><br>
+<span style="margin-left:25px"></span>x4 = mod(k4，4);
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>if bits == 1
+<br><br>
+<span style="margin-left:25px"></span>...
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>if bits == 2
+<br><br>
+<span style="margin-left:25px"></span>...
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>如果设置指纹图片最低有效位为0，那么指纹图片没有丢失任何信息；
+<br><br>
+<span style="margin-left:25px"></span>如果设置为2，指纹图片会产生失真，丢失了最低两位的信息。同样的，如果将最低有效位设置为6，那么指纹图片就会丢失更多信息，如果将最低有效位设置为8，那么就意味着将图像的8位表示全部设置为0，此时图片就变成了纯黑图片，原始的图片信息就完全失去了。在实验结果部分，会对不同失真状态下的指纹匹配分数进行统计分析。7.26 解密过程
+<br><br>
+<span style="margin-left:25px"></span>对指纹图片的解密过程同样与论文5.5部分所阐述的解密算法相似。
+<br><br>
+<span style="margin-left:25px"></span>对指纹图片解密的Matlab仿真实现代码如下：function y = reverse(QrImagewithwatermarkImage， watermarkImage)
+<br><br>
+<span style="margin-left:25px"></span>[m，n] = size(watermarkImage);
+<br><br>
+<span style="margin-left:25px"></span>newwatermark=zeros(m，n);
+<br><br>
+<span style="margin-left:25px"></span>newwatermark2 = zeros(m，n);
+<br><br>
+<span style="margin-left:25px"></span>for i=1:
+<br><br>
+<span style="margin-left:25px"></span>for j=1:
+<br><br>
+<span style="margin-left:25px"></span>x1 = mod(QrImagewithwatermarkImage(i，j，1)，4);
+<br><br>
+<span style="margin-left:25px"></span> //x2，x3省略x4 = mod(QrImagewithwatermarkImage(i+m，j+n，1)，4);
+<br><br>
+<span style="margin-left:25px"></span>newwatermark(i，j) = x1 + x2*4 + x3*16 + x4*64;
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>end
+<br><br>
+<span style="margin-left:25px"></span>newwatermark2 = uint8(newwatermark);
+<br><br>
+<span style="margin-left:25px"></span>y = newwatermark2;
+<br><br>
+<span style="margin-left:25px"></span>7.27 实验结果
+<br><br>
+<span style="margin-left:25px"></span>图6.1展示了指纹图片在不同失真条件下的指纹匹配平均结果。
+<br><br>
+<span style="margin-left:25px"></span>从实验结果中可以看出，当设置图片最低有效位为6位时，由于图片有较大失真，导致图片在大多数样本条件下匹配分数低于0位失真和2位失真的情况。当图片最低有效位设置为2时，由于其失真程序较小，匹配分数与无失真情况比较接近。从上述实验结果分析，我们认为选取2位的最低有效位存储密钥信息，既可以保证良好的图像加密，
+<br><br>
+<span style="margin-left:25px"></span>由可以保证还原出来的指纹图片失真较小，对正常的指纹匹配不构成大的影响。图6.1 实验结果
+<br><br>
+<span style="margin-left:25px"></span>7.28 安全性分析
+<br><br>
+<span style="margin-left:25px"></span>系统采用了可逆数字水印技术加强系统安全性。
+<br><br>
+<span style="margin-left:25px"></span>正如仿真试验中看到的那样，我们采用不同的二进制位数来控制指纹图像矩阵。首先我们采用最低两位进行指纹图像的加密，在这种情况下，指纹图像的失真较小，新的图像与原始指纹图像相比只丢失了很少的信息；随后，我们采用最低四位和最低六位进行指纹图像加密，在这些情况下，加密后的指纹图像较之于原始指纹图像丢失了更多的信息。图6.2展示了上述不同情形下生成的二维码图片信息。图6.2 不同条件下的二维码图片
+<br><br>
+<span style="margin-left:25px"></span>然而，从二维码图像中，我们并不能看出不同条件下的区别，图6.3展示了由上述二维码解码获得的指纹图片。
+<br><br>
+<span style="margin-left:25px"></span>图6.3 不同条件下的指纹图片
+<br><br>
+<span style="margin-left:25px"></span>从解码后获得的指纹图片中可以看出，与失真2位相比，失真6位的指纹图片比原始图片更暗，这意味着损失了更多的信息用于加密。
+<br><br>
+<span style="margin-left:25px"></span>从仿真实验中可以看出，采用指纹图片最低两位进行加密，不仅能够加强系统的安全性，而且不影响正常的指纹匹配结果。因此，我们认为，基于数字水印的指纹认证系统是足够安全的。7.29 本章小结
+<br><br>
+<span style="margin-left:25px"></span>本章基于Matlab进行了指纹认证系统的仿真实验。
+<br><br>
+<span style="margin-left:25px"></span>分别对加密过程、解密过程进行了仿真，并对原始图像和失真图像的实验结果进行了对比分析，给出了相关实验结果。在仿真实验的基础上，对新旧系统在成本、可用性、安全性等诸多方面进行了比较分析，结果表明，基于数字水印的指纹认证系统在成本、可用性和安全性等诸多方面均存在着较大的优势，具有广泛的前景。7 总结与展望
+<br><br>
+<span style="margin-left:25px"></span>8.30 总结
+<br><br>
+<span style="margin-left:25px"></span>论文在移动互联网背景下探讨了基于智能手机的加强安全的指纹认证系统的设计和实现。
+<br><br>
+<span style="margin-left:25px"></span>回顾系统的开发过程，主要工作如下：（1）从宏观上分析了当前传统指纹识别系统的工作方式，并结合移动互联网的特点，提出了一个新的指纹认证系统解决方案。
+<br><br>
+<span style="margin-left:25px"></span>新的指纹认证系统旨在解决传统指纹认证系统中的高成本和低可用性问题。（2）调查了实现指纹认证系统的相关技术成果，包括指纹识别技术、数字水印技术、二维码技术、SOA技术、Web Service技术以及Nancy Framework.
+<br><br>
+<span style="margin-left:25px"></span>（3）基于新的指纹认证系统解决方案，分析系统中存在的安全漏洞及其防御措施，结合二维码技术和可逆数字水印技术加入了一个新的安全模块。
+<br><br>
+<span style="margin-left:25px"></span>在此基础上进行了系统需求建模。给出了系统总体用例图并分用例进行了用例描述。（4）在面向对象的需求分析基础上，进行了面向对象设计，结合REST Web Service技术进行了系统架构设计和数据库设计。
+<br><br>
+<span style="margin-left:25px"></span>（5）围绕系统设计，在. net平台上采用 Nancy Framework分别实现服务器模型层、视图层和控制器层，
+<br><br>
+<span style="margin-left:25px"></span>此外还对系统关键技术、匹配算法、指纹加密算法进行了详细分析。（6）在系统实现的基础上，采用Matlab进行了系统仿真实验，并对实现结果从成本和安全性等方面进行了分析。
+<br><br>
+<span style="margin-left:25px"></span>在上述系统设计和开发过程中，遇到并解决了很多问题，经验教训如下：
+<br><br>
+<span style="margin-left:25px"></span>（1）在.net平台上开发服务端时应注意解决好配置问题。
+<br><br>
+<span style="margin-left:25px"></span>在系统开发过程中，由于net平台配置的复杂性，产生了许多非代码的问题，只有解决好相对应的配置问题，才能提高平台的开发效率和运行质量。对于Nancy框架，必须注意该框架的Web服务宿主问题，必须解决好Nancy框架和IIS Web服务器的协作问题，才能更好地提供Web服务。（2）系统开发过程应遵循需求－设计－实现－测试的瀑布模型[45]。
+<br><br>
+<span style="margin-left:25px"></span>需求依据产品，设计依据需求，实现依据设计，测试面向需求，整个过程环环相扣，互相制约和保证，这样的开发闭环有助于开发者保证开发效率，也可以使最终开发出来的产品符合最初的期望。在许多软件开发过程中，人们经常重代码轻需求和设计，这最终导致开发出来的系统并不能符合最初的用户期望，这也证明了代码和设计文档同等重要，不可偏废。（3）指纹认证系统开发必须特别注重安全性问题。
+<br><br>
+<span style="margin-left:25px"></span>由于指纹认证系统关乎用户身份认证，因此需要防止用户身份信息的泄露，同时也必须确保指纹认证者身份的有效性。采用可逆数字水印加密可以有效的防止会话劫持和重放攻击。（4）采用开放灵活的技术架构提供跨平台可扩展的Web服务。
+<br><br>
+<span style="margin-left:25px"></span>开放灵活的技术架构是面向对象设计原则的要求之一，面向对象的设计原则要求面向接口编程而不是面向实现编程。采用基于REST的Web Service可保证系统功能的跨平台和扩展。（5）没有最好的架构，只有最合适的架构。
+<br><br>
+<span style="margin-left:25px"></span>在指纹认证系统的开发过程中，分别采用了Ruby on Rails、Node.js、Nancy Framework等多种技术架构，深感架构之美；但是由于指纹识别类库所限，最终只能采用.net平台下的Nancy Framework来实现整个系统。8.31 展望
+<br><br>
+<span style="margin-left:25px"></span>基于数字水印的指纹认证系统是对移动互联网时代下新的指纹识别系统的有效尝试。
+<br><br>
+<span style="margin-left:25px"></span>经过这次系统开发，我认为以下一些技术和方法会更适应移动互联网的未来：（1）服务化越来越称为移动互联网的基石，SOA和Web Service将成为移动互联网的基础理念。
+<br><br>
+<span style="margin-left:25px"></span>未来的移动互联网会更多的采用服务化接口提供多种跨平台的服务。（2）轻量级框架会越来越流行，由于未来移动互联网的发展，移动设备对 Web API的需求远远大于对 Web页面的需求，
+<br><br>
+<span style="margin-left:25px"></span>鉴于此许多只实现 Web API功能的轻量级框架必将越来越流行。（3）敏捷化开发方法会在移动开发中占据一席之地。
+<br><br>
+<span style="margin-left:25px"></span>由于移动互联网瞬息万变，因此敏捷化方法更加适应了移动端快速发展的需求。快速开发、快速上线、快速迭代，这种新的开发方法可能会随着移动互联网的发展迅速流行。（4）基于智能手机的指纹识别技术会在未来几年取得愈发广泛的重视和发展，会有越来越多的应用场景采用基于智能手机的指纹识别技术。
+<br><br>
+<span style="margin-left:25px"></span>因此，应当加强对移动互联网背景下指纹识别系统开发的研究。相信在不久的将来，这种技术必将大放光彩。致谢
+<br><br>
+<span style="margin-left:25px"></span>值此论文完稿之日，我的内心十分激动，完成一篇学位论文确实花费了众多人的努力与汗水。
+<br><br>
+<span style="margin-left:25px"></span>在此，我必须首先感谢我的导师——肖来元教授，自研究生以来，肖老师严谨的治学态度给我留下了深刻的印象，从入学时研究方向的选定，到论文论题的确立，再到具体的学位论文写作与修改，这其中无不包含肖老师对我的悉心指导与教诲。每当有问题请教老师以后，总能让人收获良多。这篇论文的完成也离不开他认真地修改和点评。这里，我对肖老师对我的帮助表示衷心感谢。其次，我要感谢日本法政大学的Kaoru Uchida教授，Uchida教授是指纹图像处理研究的专家学者，有多年指纹识别系统的研究和开发经验，论文中的许多灵感和创意都和Uchida教授有关。
+<br><br>
+<span style="margin-left:25px"></span>Uchida教授时刻都在关注着我们指纹认证系统的研究进展，为指纹认证系统的研究同样付出了巨大的努力。或许如果没有Uchida教授的努力和执着，这项研究恐怕很难进行的如此顺利。再次，我要感谢软件学院的老师们。
+<br><br>
+<span style="margin-left:25px"></span>是你们教会了我各种各样技术，让我看到了丰富多彩的计算机世界，尤其要感谢区士颀老师和邱德红老师，是你们带我迈入了面向对象技术的殿堂，让我一窥设计之美。此外还要感谢软酷实训的老师们，是你们教会了我如何真正自己实现一个应用系统。最后，我想感谢相关项目组的同学们。
+<br><br>
+<span style="margin-left:25px"></span>感谢项目经理付崇军同学，你带领我们团队一路过关斩将、克服无数个技术难题，你教会了我勇气与执着；感谢客户端开发张启虎同学，你与我密切配合，共同完成了这个指纹认证系统，你让我学会了团队合作的重要性。是你们让我记住了那彻夜奋战的日月。时光过得真快，转瞬即逝。
+<br><br>
+<span style="margin-left:25px"></span>论文完成之际，也是研究生生涯结束的开始。在最后的最后也允许我感谢我热爱着的软件行业和为开源社区贡献着的每一个程序员，代码改变世界，不忘初心，方得始终。参考文献
+<br><br>
+<span style="margin-left:25px"></span>[1] 尹义龙， 宁新宝， 张晓梅. 自动指纹识别技术的发展与应用. 南京大学学报：
+<br><br>
+<span style="margin-left:25px"></span>自然科学版， 2002， 38(1):29-35.[2] Nist B.
+<br><br>
+<span style="margin-left:25px"></span> fingerprint software， National Institute of Standards and Technology (NIST)， Internet. 2006.[3] 郭川军. 计算机指纹识别技术研究. 中国科技信息， 2007(5):
+<br><br>
+<span style="margin-left:25px"></span>108-109.[4] 杨雪. 指纹识别系统研究：
+<br><br>
+<span style="margin-left:25px"></span>[学位论文]. 哈尔滨理工大学， 2009.[5] 王崇文， 李见为， 周宏文，等. 指纹识别系统的设计与实现. 计算机应用， 2001， 21(12):
+<br><br>
+<span style="margin-left:25px"></span>61-63.[6] Maddala S， Bartůněk J S， Nilsson M.
+<br><br>
+<span style="margin-left:25px"></span> Implementation and evaluation of NIST Biometric Image Software for fingerprint recognition. Biosignals and Biorobotics Conference (BRC)， 2011 ISSNIP. IEEE， 2011:1-5.[7] Stein C， Nickel C， Busch C.
+<br><br>
+<span style="margin-left:25px"></span> Fingerphoto recognition with smartphone cameras.  Biometrics Special Interest Group (BIOSIG)， 2012 BIOSIG - Proceedings of the International Conference of the. IEEE， 2012:1-12.[8] 王勇， 朱方金， 史清华.
+<br><br>
+<span style="margin-left:25px"></span> PKI中数字时间戳技术. 大连理工大学学报， 2003， 43(z1):27-29.[9] 李雪真. 挑战/应答机制与生物特征相结合的身份认证. 网络安全技术与应用， 2007(1):
+<br><br>
+<span style="margin-left:25px"></span>24-26.[10] 常志国. 可逆水印与图象保护技术研究：
+<br><br>
+<span style="margin-left:25px"></span>[学位论文]. 上海交通大学， 2009.[11] 白冬慧. 抗几何攻击的最低有效位数字水印算法. 电视技术， 2013， 37(5):
+<br><br>
+<span style="margin-left:25px"></span>29-32.[12] dr dobbs.
+<br><br>
+<span style="margin-left:25px"></span> Image authentication for a slippery new age. Dr Dobb’s J， 1995， 20.[13] Tirkel A Z， Van Schyndel R G， Hall T， et al.
+<br><br>
+<span style="margin-left:25px"></span> Secure Arrays for Digital Watermarking[C]. Pattern Recognition， 1998. Proceedings. Fourteenth International Conference on. IEEE， 1998:1643-1645 vol.2.[14] Jia X， Yang X， Zang Y， et al.
+<br><br>
+<span style="margin-left:25px"></span> A cross-device matching fingerprint database from multi-type sensors. Pattern Recognition (ICPR)， 2012 21st International Conference on. IEEE， 2012:3001-3004.[15] Se S.
+<br><br>
+<span style="margin-left:25px"></span> Zebra-Crossing Detection for the Partially Sighted. 2013 IEEE Conference on Computer Vision and Pattern Recognition. IEEE Computer Society， 2000:2211-2211.[16] Han S Y， Jung E H， Cho S Y.
+<br><br>
+<span style="margin-left:25px"></span> A Robust Digital Watermarking Adopting 2D Barcode[M]. Computer Analysis of Images and Patterns. Springer Berlin Heidelberg， 2005:717-723.[17] Newcomer E， Lomow G.
+<br><br>
+<span style="margin-left:25px"></span> Understanding SOA with Web services. Addison-Wesley， 2005.[18] Skrupsky N， Monshizadeh M， Bisht P， et al.
+<br><br>
+<span style="margin-left:25px"></span> Don’t repeat yourself: automatically synthesizing client-side validation code for web applications. Proceedings of the 3rd USENIX conference on Web Application Development. USENIX Association， 2012:11-11.[19] 程炜， 杨宗凯， 乐春晖. 基于Web Service的一种分布式体系结构. 计算机应用研究， 2002， 19(3):
+<br><br>
+<span style="margin-left:25px"></span>105-107.[20] Keidl M， Seltzsam S， Kemper A.
+<br><br>
+<span style="margin-left:25px"></span> Flexible and Reliable Web Service Execution. In Proc. of the Workshop on Entwicklung von Anwendungen auf der Basis der XML Web-Service Technologie， 2002:17--30.[21] Curbera F， Duftler M， Khalaf R， et al.
+<br><br>
+<span style="margin-left:25px"></span> Unraveling the Web Services Web: An Introduction to SOAP， WSDL， and UDDI. IEEE Internet Computing， 2002， 6(2):86-93.[22] Rauf I， Siavashi F， Truscan D， et al.
+<br><br>
+<span style="margin-left:25px"></span> Scenario-Based Design and Validation of REST Web Service Compositions. Web Information Systems and Technologies. Springer International Publishing， 2014.[23] Curbera F， Duftler M， Khalaf R， et al.
+<br><br>
+<span style="margin-left:25px"></span> Unraveling the Web Services Web: An Introduction to SOAP， WSDL， and UDDI. IEEE Internet Computing， 2002， 6(2):86-93.[24] 沈伯青， 杨宗凯.
+<br><br>
+<span style="margin-left:25px"></span> WEB服务的基石：UDDI技术. 计算机工程与应用， 2003， 39(3):147-150.[25] Fielding， Roy Thomas.
+<br><br>
+<span style="margin-left:25px"></span> Architectural Styles and the Design of Network-based Software Architectures， Doctoral dissertation， University of California， Irvine， 2000.[26] 任中方， 张华， 闫明松，等.
+<br><br>
+<span style="margin-left:25px"></span> MVC模式研究的综述. 计算机应用研究， 2004， 21(10):1-4.[27] Debasish Ghosh (美). 领域专用语言实战(图灵程序设计丛书). 北京：
+<br><br>
+<span style="margin-left:25px"></span>人民邮电出版社， 2013.[28] Surhone L M， Tennoe M T， Henssonow S F， et al.
+<br><br>
+<span style="margin-left:25px"></span> Sinatra (software). Betascript Publishing， 2010.[29] 王世锋.
+<br><br>
+<span style="margin-left:25px"></span> MVC设计模式的研究与应用：[学位论文]. 中国海洋大学， 2006.[30] 高凌， 熊前兴. 在Web表现层分离表现与数据方法的探讨. 电脑知识与技术：
+<br><br>
+<span style="margin-left:25px"></span>学术交流， 2007(2):301-302.[31] 王准， 夏阳. 基于Ruby on Rails的WEB开发新技术. 微计算机信息， 2007， 23(30):
+<br><br>
+<span style="margin-left:25px"></span>218-220.[32] 黄小明. 交换网络中基于TCP协议的会话劫持技术及防范措施.
+<br><br>
+<span style="margin-left:25px"></span> Journal of Shaoyang University：naturalence Edition， 2007(1):35-39.[33] 刘家芬， 周明天. 对安全协议重放攻击的分类研究. 计算机应用研究， 2007， 24(3):
+<br><br>
+<span style="margin-left:25px"></span>135-139.[34] 钟声， 邱钢， 孙红兵. 基于时间戳的密码身份认证方案. 计算机应用， 2006， 26(S2):
+<br><br>
+<span style="margin-left:25px"></span>71-72.[35] 王小妮， 杨根兴. 基于挑战/应答方式的身份认证系统的研究. 北京信息科技大学学报：
+<br><br>
+<span style="margin-left:25px"></span>自然科学版， 2003， 18(4):14-18.[36] 施幸东.
+<br><br>
+<span style="margin-left:25px"></span> OpenSSL编程实践——实现文件加密和数字签名. 程序员：csdn开发高手， 2004:80-82.[37] 刘三满，李明浩. 数字签名技术. 科技情报开发与经济， 2005， 15(22):
+<br><br>
+<span style="margin-left:25px"></span>211-213.[38] 陈瑞鑫， 邹传云. 一种轻量级RFID安全协议. 微型机与应用， 2009， 28(23):
+<br><br>
+<span style="margin-left:25px"></span>43-45.[39] 王少锋. 面向对象技术UML教程. 北京：
+<br><br>
+<span style="margin-left:25px"></span>清华大学出版社， 2012.[40] BYVoid.
+<br><br>
+<span style="margin-left:25px"></span> Node.js开发指南. 北京：人民邮电出版社， 2012.[41] 弗里曼.
+<br><br>
+<span style="margin-left:25px"></span> Head First设计模式. 北京：中国电力出版社， 2007.[42] 尹梁. 指纹特征点提取及比对：
+<br><br>
+<span style="margin-left:25px"></span>[学位论文]. 成都：电子科技大学， 2004.[43] Gonzalez R C， Woods R E， Eddins S L.
+<br><br>
+<span style="margin-left:25px"></span> Digital image processing using MATLAB[J]. Digital Image Processing Using Matlab， 2004， 21(4):197-199.[44] 范影乐.
+<br><br>
+<span style="margin-left:25px"></span> MATLAB仿真应用详解. 北京：人民邮电出版社， 2001.[45] 张海藩. 软件工程导论（第5版）. 北京：
+<br><br>
+<span style="margin-left:25px"></span>清华大学出版社， 2008.本论文属于
+<br><br>
+<span style="margin-left:25px"></span>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport" target="blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2015 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>

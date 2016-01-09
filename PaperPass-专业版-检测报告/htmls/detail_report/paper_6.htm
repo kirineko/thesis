@@ -1,0 +1,544 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威中文论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="paper_7.htm">下一页</a>
+<a class="pagelink" href="paper_14.htm">尾页</a>
+页码：6/14页
+]
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">220</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图3.10 第一次改进策略</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">221</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/489.htm' target='right' class='orange' >改进后的系统解决方案如图3.10所示。</a><span class='green'>在这种情况下，用户A首先拍摄指纹图片，其次他向服务器发送请求，服务器接收到用户认证请求后首先根据当时的时间戳生成相应的二维码图片并将该图片返回给客户端。</span><span class='green'>客户端接收到二维码图片之后，将拍摄到的原始的指纹图片放置于二维码图片中心位置产生了一个新的图片。</span><a href='../sentence_detail/492.htm' target='right' class='orange' >接着，客户端将新的图片发送给服务器，服务器端接收到新的图片以后，</a><a href='../sentence_detail/493.htm' target='right' class='orange' >首先对二维码进行解码获得时间戳信息，判断时间戳信息是否正确。</a><span class='green'>如果与服务器端生成时保存的时间戳一致，系统就将指纹图片提取出来发送给匹配模块，否则服务器会直接返回认证失败信息给客户端。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">222</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/495.htm' target='right' class='orange' >现在我们再来分析新系统的安全性。</a><span class='green'>此时，攻击者B仍然能够通过会话劫持窃取包含二维码和指纹的新图片。</span><span class='green'>但是，由于图片是二维码和指纹图片的混合，攻击者不能再直接获取原始的指纹图片了。</span><a href='../sentence_detail/498.htm' target='right' class='orange' >更重要的是，攻击者不再能够进行重放攻击。</a><span class='green'>如果攻击者 B再次向服务器发送他刚刚劫持到的图片，图片中的时间戳已经不再有效，</span><span class='green'>原因在于时间戳认证在 B重发消息之前已经被认证过了，而时间戳仅一次有效。</span><span class='green'>因此，服务器不会将攻击者B发送的图片分发给匹配模块作进一步处理。</span><a href='../sentence_detail/502.htm' target='right' class='orange' >服务器会直接返回失败消息给攻击者。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">223</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>由此可见，指纹认证系统的安全性已经得到了显着的改进与增强。</span><span class='green'>然而该系统仍然是不安全的。</span><span class='green'>攻击者仍有许多办法来获取原始的指纹图片，攻击者只需要将截获到的新图片进行中心部分裁剪就可以轻松地还原出原始的指纹图片，</span><span class='green'>再他们获取到了原始的指纹图片以后，攻击者可以重新向服务器发送认证请求以获取新的二维码图片。</span><span class='green'>这样，他们只需要将二维码图片与原始图片进行结合就可以再次将图片发送给服务器进行认证。</span><span class='green'>这又变成了一种重放攻击，在这种场景下，由于时间戳消息是全新可用的，攻击者可以通过服务器端的时间戳检查。</span><a href='../sentence_detail/509.htm' target='right' class='orange' >这样攻击者就成功通过了系统认证。</a><span class='green'>为了防止这种情况的发生，该解决方案仍然需要进一步改进。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">224</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.14.14 第二次改进</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">225</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/512.htm' target='right' class='orange' >这次改进的核心思想和第一次改进基本相同。</a><span class='green'>上述解决方案的主要问题在于，客户端只是简单直接地将指纹图片与二维码图片进行了拼接，由于指纹图片本身并没有被隐藏起来，这使得新产生的图片很容易被破解。</span><span class='green'>因此，如果我们能够采用一种算法使指纹图片隐藏起来，攻击者就很难对截获到的图片进行还原。</span><a href='../sentence_detail/515.htm' target='right' class='red' >这样系统安全性就会大大提高。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">226</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/516.htm' target='right' class='orange' >此时，我们将可逆数字水印技术加入我们的指纹认证系统中。</a><span class='green'>采用这一技术，我们可以轻松地将原始指纹图片和二维码图片进行组合，于此同时可以将指纹图片隐藏起来。</span><span class='green'>这样，就可以把指纹图片作为数字水印隐藏起来，而不是将其直接发送给服务器。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">227</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图3.11 第二次改进策略</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">228</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图3.11展示了本次改进后新解决方案的基本流程。</span><a href='../sentence_detail/521.htm' target='right' class='orange' >该解决方案与第一次改进后的方案基本类似。</a><span class='green'>我们只是采用了数字水印代替了之前的直接组合。</span><span class='green'>客户端把指纹图片作为数字水印并将其编码进二维码图片当中。</span><a href='../sentence_detail/524.htm' target='right' class='orange' >服务器端接收包含数字水印的二维码图片，然后调用解码模块对二维码图片进行解码。</a><span class='green'>解码之后，服务器端会将原始二维码图片和原始的指纹图片进行分离，接着服务器就可以检查二维码中的时间戳信息，</span><a href='../sentence_detail/526.htm' target='right' class='orange' >如果时间戳正确，则对指纹图片进行匹配操作，否则返回认证失败。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">229</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/527.htm' target='right' class='orange' >经过这样的加密，系统安全性显着提高。</a><a href='../sentence_detail/528.htm' target='right' class='orange' >攻击者再也不能很轻易地获取原始的指纹图片了。</a><span class='green'>攻击者只能截获到一张二维码图片，而这张图片本身对身份认证是没有任何意义的。</span><span class='green'>如果攻击者尝试还原原始的指纹图片信息，他们必须知道相应的数字水印加密算法，否则他们就无法破解出真实的指纹信息。</span><span class='green'>然而，一旦系统加密算法被泄漏，攻击者仍然可以破解出原始的指纹信息，这样一来，系统仍然是不够安全的。</span><a href='../sentence_detail/532.htm' target='right' class='orange' >因此，我们还需要对指纹系统进行进一步的改进。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">230</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.14.15 第三次改进</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">231</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第三次改进则非常简单。</span><a href='../sentence_detail/535.htm' target='right' class='orange' >我们在最终的系统中加入密钥机制。</a><a href='../sentence_detail/536.htm' target='right' class='orange' >在第二次系统改进的基础上，我们采用用户密码作为密钥对上次改进中的图片进行再加密，客户端将再加密之后的图片发送给服务器。</a><a href='../sentence_detail/537.htm' target='right' class='orange' >服务器端接收到图片以后首先根据用户名在数据库中查找相应的用户密钥，然后根据用户密钥对图片进行解密，</a><span class='green'>在解密之后，服务器端执行与上一部分相同的操作即可。</span><span class='green'>第三次改进如图3.12所示。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">232</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图3.12 第三次改进策略</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">233</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>这样，攻击者必须通过掌握了系统加密算法和用户密钥之后才能还原出原始的指纹图像，大大增加了破解的难度和成本。</span><a href='../sentence_detail/542.htm' target='right' class='orange' >因此，我们认为经过三次改进后的系统已经足够安全。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">234</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.14 需求建模</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">235</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>下面我们基于上述解决方案分析对系统进行需求建模[39]。</span><a href='../sentence_detail/545.htm' target='right' class='orange' >本部分采用面向对象的需求分析方法对上述解决方案进行需求分析，首先给出了系统整体用例图，然后对用例图进行了具体描述。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">236</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.15.16 总体用例图</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">237</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/547.htm' target='right' class='red' >系统总体用例图如图3.13所示。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">238</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/548.htm' target='right' class='red' >图3.13 系统总体用例图</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">239</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.15.17 用例描述</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">240</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/550.htm' target='right' class='orange' >从总体用例图可以看出，系统参与者主要用两类：</a><span class='green'>游客Guest和用户User，而由于本系统和拥护身份认证等敏感操作息息相关，因此本系统游客除了注册登录以外并没有任何可用操作。</span><a href='../sentence_detail/552.htm' target='right' class='orange' >对于游客而言，他们只有用户注册和用户登录两个用例。</a><span class='green'>游客进行登录操作以后，游客就转化为用户User.</span><a href='../sentence_detail/554.htm' target='right' class='orange' > User是本系统的核心参与者，拥有指纹录入和指纹认证两个用例。</a><span class='green'>这两个用例又分别包含一些子用例。</span><span class='green'>现进行详细描述。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">241</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>指纹录入用例，是用户通过指纹机将自己的所有指纹录入进指纹认证系统后台数据库中，指纹录入是指纹认证的基础。</span><span class='green'>该用例包含2个子用例：</span><a href='../sentence_detail/559.htm' target='right' class='orange' >上传身份信息用例和上传指纹图片用例。</a><span class='green'>在上传指纹图片之前，必须对指纹本身的用户信息先录入后台数据库，即上传身份信息，在上传身份信息之后，才可以开始正式的指纹图片录入。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">242</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/561.htm' target='right' class='orange' >指纹认证用例，是用户通过手机拍照验证自身指纹是否匹配的过程。</a><span class='green'>该用例包含4个子用例：</span><span class='green'>二维码生成用例、数字水印生成用例、来源审核用例、指纹对比用例。</span><a href='../sentence_detail/564.htm' target='right' class='orange' >其中二维码生成、数字水印、来源审核都属于系统的安全模块，用于增强系统的安全性，防止会话劫持和重放攻击。</a><a href='../sentence_detail/565.htm' target='right' class='orange' >二维码生成用例会根据请求的时间戳生成相应的二维码图像；</a><span class='green'>数字水印用例会将二维码图像和原始指纹图片进行可逆水印计算生成数字水印；</span><span class='green'>来源审核用例主要用来检查数字水印中包含的时间戳信息以判断请求来源的合法性；</span><span class='green'>指纹对比用例主要用来比较用户指纹图片的匹配度，是指纹匹配的核心用例。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">243</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.15 本章小结</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">244</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>本章首先讨论了传统指纹识别系统中存在的安全威胁及其防御策略，接着分析了传统指纹安全策略中存在的不足和问题，</span><span class='green'>在此基础上采用逐步改进的方法建立了一个基于数字水印的解决方案保证了系统的可用性和安全性，</span><span class='green'>并对系统重放攻击等安全威胁场景进行特别防御。</span><span class='green'>在确立了基于数字水印的解决方案的基础上，采用面向对象方法进行了系统需求建模，给出了系统用例图。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">245</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4 指纹认证系统设计</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">246</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/575.htm' target='right' class='orange' >本章探讨的主要问题是系统的架构设计。</a><span class='green'>在确定了系统的解决方案和需求建模之后，必须根据相关的用例模型并结合特定的技术进行系统设计，系统设计与特点的技术选型息息相关。</span><span class='green'>本章共分为3部分，第一部分依据系统用例分析结合特定的 API函数分析系统业务逻辑，</span><span class='green'>第二部分基于 REST Web Service给出了系统架构设计整体方案和详细设计方案，</span><a href='../sentence_detail/579.htm' target='right' class='orange' >第三部分在面向对象设计的基础上进行数据库设计。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">247</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.16 系统业务逻辑</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">248</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>本部分讨论系统业务逻辑，首先对系统组件进行详细划分，然后对整个系统的基本业务逻辑进行阐述。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">249</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.17.18 系统组件</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">250</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/583.htm' target='right' class='orange' >系统组件包含以下四部分：</a>
+</p>
+</div>
+
+
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="paper_7.htm">下一页</a>
+<a class="pagelink" href="paper_14.htm">尾页</a>
+页码：6/14页
+]
+</div>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport" target="blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2015 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>
